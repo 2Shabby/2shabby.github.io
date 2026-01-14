@@ -1,0 +1,12 @@
+<nav class="main-nav" aria-label="Main navigation">
+  <ul class="nav-links" id="nav-menu">
+    {% assign nav_pages = site.pages | where_exp: "item", "item.nav_order" | sort: "nav_order" %}
+    {% for nav_page in nav_pages %}
+    <li>
+      <a href="{{ nav_page.url | relative_url }}"{% if page.url == nav_page.url %} class="active" aria-current="page"{% endif %}>
+        {{ nav_page.nav_title | default: nav_page.title | escape }}
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</nav>

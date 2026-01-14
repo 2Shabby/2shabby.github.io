@@ -1,0 +1,15 @@
+# Navigation data file
+# Alternative approach to front matter nav_order
+# Uncomment and customize if you prefer centralized navigation
+
+# main:
+#   - title: Home
+#     url: /
+#   - title: About
+#     url: /about/
+#   - title: Projects
+#     url: /projects/
+#   - title: Blog
+#     url: /blog/
+#   - title: Contact
+#     url: /contact/
