@@ -1,20 +1,16 @@
 ---
 layout: page
 title: About
-description: Wandering through systems and machine learning.
+description: Systems and machine learning.
 permalink: /about/
 narrow: true
 ---
 
 ## Hi, I'm Mohammad
 
-I tend to find myself drawn to the quieter questions in systems and machine learning—how things fit together, where the boundaries blur between low-level code and emergent behavior.
+I work on distributed systems, language model infrastructure, and some quantum computing. Interested in how things connect across layers—from low-level code to emergent behavior.
 
-Over time, I've wandered through various territories: polyglot runtimes, edge devices, quantum states. Each project has been less about arriving somewhere and more about seeing what unfolds when you follow a thread carefully.
-
-I'm drawn to systems that hold together gracefully—where architecture emerges from constraints rather than being imposed upon them.
-
-**Recurring interests:** distributed systems • language model infrastructure • systems programming • edge computing • quantum ML
+**Interests:** distributed systems • LLM infrastructure • systems programming • edge computing • quantum ML
 
 ---
 
