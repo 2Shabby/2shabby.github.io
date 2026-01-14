@@ -1,44 +1,39 @@
 ---
-title: "Sample Article: How to Write Posts"
+title: "[TEMPLATE] Article Title Goes Here"
 date: 2026-01-14
 tags:
-  - writing
-  - guide
-description: "A template demonstrating the article structure for this blog."
+  - template
+description: "This is a placeholder template. Replace with your actual article."
+draft: true
 ---
 
-This is the opening paragraph of your article. It should hook the reader and set up what the post will cover. When displayed on the writing page, these first paragraphs will be visible as a preview.
+> **TODO:** This is a template file demonstrating the article structure. Replace this entire file with your actual content, or delete it once you've created your first real post.
 
-The excerpt continues here with more context. You can include multiple paragraphs before the excerpt separator. This gives readers enough content to decide if they want to read the full article.
+This placeholder shows where your opening paragraphs appear. On the Writing page, readers see everything above the `<!--more-->` separator—typically 2-3 paragraphs that set up your topic and hook the reader.
 
 <!--more-->
 
-## The Full Article Begins Here
+## Template Instructions
 
-Everything after the `<!--more-->` separator will only be visible when the reader clicks through to the full article view. This maintains a single source of truth: you write once, and Jekyll automatically handles both the preview and full content.
+**To create a real article:**
 
-### Why This Pattern Works
+1. Create a new file in `_posts/` named `YYYY-MM-DD-your-title.md`
+2. Copy the frontmatter structure (title, date, tags, description)
+3. Write your opening paragraphs before `<!--more-->`
+4. Continue with the full article after the separator
+5. Delete this template file
 
-1. **Single Source of Truth**: The article content lives in one file
-2. **Automatic Excerpts**: Jekyll extracts everything before `<!--more-->`
-3. **Clean URLs**: Articles get pretty permalinks like `/writing/sample-article/`
-4. **Consistent Styling**: The same CSS handles both preview and full view
+**Frontmatter options:**
 
-### Writing Tips
-
-When writing your articles:
-
-- Put your best content in the first few paragraphs
-- Use the `<!--more-->` separator after 2-3 paragraphs
-- Add meaningful tags for categorization
-- Include a description for SEO and social sharing
-
-```python
-# You can include code blocks
-def hello_world():
-    print("Code highlighting works too!")
+```yaml
+---
+title: "Your Article Title"
+date: 2026-01-15
+tags:
+  - systems
+  - ml
+description: "Brief description for SEO and social sharing."
+---
 ```
 
-## Conclusion
-
-This template shows how the blog infrastructure works. Delete this sample and start writing your own posts!
+**Delete this file** once you have real content to publish.
