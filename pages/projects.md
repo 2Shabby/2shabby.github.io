@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Projects
-description: A collection of things I've built, organized by category.
+description: Things I've tended to over time.
 permalink: /projects/
 ---
 
@@ -27,6 +27,6 @@ permalink: /projects/
 
 ---
 
-## Want to collaborate?
+## Open to conversations
 
-I'm always open to interesting projects and collaborations. If you have an idea you'd like to discuss, feel free to [get in touch]({{ '/about/' | relative_url }}).
+If something here resonates or sparks a thought, I'd be glad to hear from you. [Say hello]({{ '/about/' | relative_url }}).

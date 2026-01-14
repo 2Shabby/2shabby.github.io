@@ -6,7 +6,7 @@ categories:
   # Agentic & LLM Infrastructure
   - key: agentic-llm
     label: "Agentic & LLM Infrastructure"
-    description: "Distributed agentic systems, LLM runtimes, and AI-powered code analysis"
+    description: "Explorations in distributed agents, language model runtimes, and code understanding"
     items:
       - slug: jeeves-runtime
         name: "Jeeves Agentic Runtime"
@@ -22,7 +22,7 @@ categories:
           - gRPC
           - PostgreSQL
         repo_url: "https://github.com/2Shabby/jeeves"
-        summary: "Architected polyglot agentic runtime with Go orchestration engine, Python LLM layer, gRPC IPC, and 6-provider abstraction (OpenAI, Anthropic, Azure, LlamaServer, LlamaCpp). Implemented microkernel with 4-layer memory architecture, 7-type interrupt/resume system, PostgreSQL checkpoint persistence, and Protocol classes for complete dependency injection. Achieved comprehensive test coverage across 5 architectural layers (L0-L4) with documented contracts and strict import boundaries. 82K LOC (74K Python + 8K Go), 811 tests."
+        summary: "Polyglot agentic runtime with Go orchestration engine, Python LLM layer, gRPC IPC, and 6-provider abstraction (OpenAI, Anthropic, Azure, LlamaServer, LlamaCpp). Microkernel with 4-layer memory architecture, 7-type interrupt/resume system, PostgreSQL checkpoint persistence, and Protocol classes for dependency injection. Tested across 5 architectural layers (L0-L4) with documented contracts and import boundaries."
 
       - slug: jeeves-code-analysis
         name: "Jeeves Code Analysis Pipeline"
@@ -38,7 +38,7 @@ categories:
           - pgvector
           - DevOps
         repo_url: "https://github.com/2Shabby/jeeves"
-        summary: "Engineered 7-agent LLM pipeline with anti-hallucination Critic agent, citation validation, and bounded reintent cycles for read-only codebase exploration. Built 27 analysis tools with deterministic fallback strategies (symbol→grep→semantic) across 10 programming languages using configuration-driven agents (zero concrete classes). Implemented PostgreSQL/pgvector semantic search, gRPC streaming to WebSocket UI, and GPU-accelerated local LLM inference via Docker multi-stage builds. 23K Python LOC, 358 tests, 27 tools."
+        summary: "7-agent LLM pipeline with anti-hallucination Critic agent, citation validation, and bounded reintent cycles for read-only codebase exploration. Analysis tools with deterministic fallback strategies (symbol→grep→semantic) across 10 programming languages using configuration-driven agents. PostgreSQL/pgvector semantic search, gRPC streaming to WebSocket UI, and GPU-accelerated local LLM inference via Docker."
 
       - slug: jeeves-assistant
         name: "AI Personal Assistant Capability"
@@ -52,12 +52,12 @@ categories:
           - pgvector
           - Python
         repo_url: "https://github.com/2Shabby/jeeves"
-        summary: "Engineered modular capability layer with 24 async Python tools for Kanban task management, semantic-search journaling, and reminder tracking with staleness scoring. Implemented PostgreSQL/pgvector backend with 4 tables, 23 indexes, optimistic locking for concurrent edits, and soft-delete pattern preserving audit history. Built event-driven architecture emitting 14 event types to L2 bus, with capability registration protocol enabling schema, prompts, and tools as self-contained plugin. 3.4K LOC (Python + SQL), 24 tools, 4 tables."
+        summary: "Modular capability layer with async Python tools for Kanban task management, semantic-search journaling, and reminder tracking with staleness scoring. PostgreSQL/pgvector backend with optimistic locking for concurrent edits and soft-delete pattern preserving audit history. Event-driven architecture with capability registration protocol enabling schema, prompts, and tools as self-contained plugin."
 
   # Systems Programming
   - key: systems-programming
     label: "Systems Programming"
-    description: "Low-level systems, operating systems, and compiler development"
+    description: "Low-level explorations—compilers, operating systems, the machinery underneath"
     items:
       - slug: compiler
         name: "C Compiler"
@@ -70,7 +70,7 @@ categories:
           - x86
           - Low-level
         repo_url: "https://github.com/2Shabby/Compiler"
-        summary: "Built a compiler for a subset of C language with complete lexer, parser, semantic analysis, and code generation targeting x86 architecture. Implements core compiler phases including lexical analysis, syntax parsing, semantic validation, intermediate representation, and machine code generation."
+        summary: "Compiler for a subset of C with lexer, parser, semantic analysis, and code generation targeting x86. Covers core compiler phases: lexical analysis, syntax parsing, semantic validation, intermediate representation, and machine code generation."
 
       - slug: linux-shell
         name: "Linux Shell"
@@ -83,7 +83,7 @@ categories:
           - OS
           - Low-level
         repo_url: "https://github.com/2Shabby/LinuxShell"
-        summary: "Developed a Bash-like shell for Linux in C using internal system calls. Supports basic commands, piping, redirection, and custom commands. Implements process management, signal handling, and I/O redirection using low-level POSIX APIs."
+        summary: "Bash-like shell for Linux in C using system calls. Supports basic commands, piping, redirection, and custom commands. Process management, signal handling, and I/O redirection via low-level POSIX APIs."
 
       - slug: xv6
         name: "Xv6 Operating System"
@@ -96,12 +96,12 @@ categories:
           - C
           - Low-level
         repo_url: "https://github.com/2Shabby/XV6"
-        summary: "Implemented multiple process scheduling algorithms in Xv6 Operating System (developed by MIT). Enhanced the kernel's process scheduler with various scheduling policies including priority-based, round-robin, and custom algorithms to optimize system performance."
+        summary: "Process scheduling algorithms in Xv6 (MIT's teaching OS). Various scheduling policies including priority-based, round-robin, and custom algorithms."
 
   # IoT & Embedded Systems
   - key: iot-embedded
     label: "IoT & Embedded Systems"
-    description: "Edge computing, voice assistants, and industrial IoT systems"
+    description: "Where software meets the physical—edge devices, sensors, voices"
     items:
       - slug: voice-gateway
         name: "Edge Voice Assistant"
@@ -117,7 +117,7 @@ categories:
           - Kubernetes
           - ONNX
         repo_url: "https://github.com/2Shabby/voice-gateway"
-        summary: "Engineered real-time voice pipeline with lock-free SPSC ring buffers and multi-threaded ALSA I/O for 48kHz audio on ARM edge devices (Radxa Rock 5). Integrated 4-model ML stack: Silero VAD, DTW-based wake word detection (3-sample enrollment), faster-whisper STT, Kokoro ONNX TTS, with optional RK3588 NPU acceleration. Deployed via Kubernetes with file-based health probes, privileged container access to /dev/snd, and 15 configurable environment variables. 1.4K Python LOC, 4 models, 8 classes."
+        summary: "Real-time voice pipeline with lock-free SPSC ring buffers and multi-threaded ALSA I/O for 48kHz audio on ARM edge devices (Radxa Rock 5). ML stack: Silero VAD, DTW-based wake word detection, faster-whisper STT, Kokoro ONNX TTS, with optional RK3588 NPU acceleration. Deployed via Kubernetes with file-based health probes."
 
       - slug: campus-energy
         name: "Campus Energy Monitoring"
@@ -132,12 +132,12 @@ categories:
           - FreeRTOS
           - Hardware
         repo_url: "https://github.com/2Shabby/campus-energy-monitoring"
-        summary: "Engineered ESP32-based IoT system interfacing with 5 industrial power meters via Modbus RTU protocol, implementing FreeRTOS task queues for non-blocking serial I/O and CRC16 validation. Built Django-Celery dashboard aggregating 12 sensor streams via OneM2M REST API, featuring 9 FusionCharts visualizations including temperature-energy correlation scatter plots. Integrated SI7021 temperature/humidity sensors with hourly data ingestion and automatic 24-hour retention cleanup. 1.8K LOC (Python + C++), 5 meters, 9 charts."
+        summary: "ESP32-based IoT system interfacing with industrial power meters via Modbus RTU, using FreeRTOS task queues for non-blocking serial I/O and CRC16 validation. Django-Celery dashboard aggregating sensor streams via OneM2M REST API, with visualizations including temperature-energy correlation scatter plots. SI7021 temperature/humidity sensors with hourly data ingestion."
 
   # Machine Learning & Quantum Computing
   - key: ml-quantum
     label: "Machine Learning & Quantum Computing"
-    description: "Quantum state generation, ML classifiers, and physics-informed neural networks"
+    description: "Questions at the edge of what's computable—quantum states, physics-aware learning"
     items:
       - slug: quantum-density-ml
         name: "Quantum State Generation via ML"
@@ -152,7 +152,7 @@ categories:
           - VAE
           - PyTorch
         repo_url: "https://github.com/2Shabby/Quantum-State-Generation"
-        summary: "Developed 8 physics-constrained GAN/VAE architectures generating valid 4×4 quantum density matrices using LDL and Cholesky decomposition for structural PSD guarantee. Achieved 100% accuracy on Werner-like teleportation classification across 54 experiments with 12-component physics-informed loss function (PSD, trace, c-bounds, diversity). Implemented batch-optimized quantum operations achieving 10-100× speedup over QuTiP using vectorized PyTorch Kronecker products for Bloch vector extraction. 5.7K Python LOC, 89 tests, 8 generators."
+        summary: "Physics-constrained GAN/VAE architectures generating valid 4×4 quantum density matrices using LDL and Cholesky decomposition for structural PSD guarantee. Physics-informed loss function covering PSD, trace, c-bounds, and diversity constraints. Batch-optimized quantum operations using vectorized PyTorch Kronecker products for Bloch vector extraction."
 
       - slug: quantum-witness-ml
         name: "Quantum Distillability Witness Learner"
@@ -167,7 +167,7 @@ categories:
           - SVM
           - PyTorch
         repo_url: "https://github.com/2Shabby/Quantum-Witness-Learner"
-        summary: "Built ML pipeline certifying 3-qubit distillability using SVM and Transformer classifiers achieving 85-100% accuracy on GHZ, W, cluster, and Werner states. Demonstrated 36D restricted Pauli features match 63D full tomography (p=0.15) while reducing measurement settings by 5×, with interpretable witness operators W = Σw_k P_k. Developed NPT/PPT/DPS Level 2 oracle hierarchy with partial transpose across all bipartitions and CVXPY SDP-based symmetric extension testing. 10.8K Python LOC, 99 tests."
+        summary: "ML pipeline certifying 3-qubit distillability using SVM and Transformer classifiers on GHZ, W, cluster, and Werner states. Restricted Pauli features match full tomography while reducing measurement settings, with interpretable witness operators. NPT/PPT/DPS Level 2 oracle hierarchy with partial transpose across all bipartitions and CVXPY SDP-based symmetric extension testing."
 
       - slug: image-style-transfer
         name: "Image Style Transfer"
@@ -195,7 +195,7 @@ categories:
   # Web & Blockchain
   - key: web-blockchain
     label: "Web & Blockchain"
-    description: "Decentralized applications and web development projects"
+    description: "Distributed trust, decentralized systems, web interfaces"
     items:
       - slug: healthcare-blockchain
         name: "Blockchain Electronic Health Records"
@@ -209,7 +209,7 @@ categories:
           - IPFS
           - Healthcare
         repo_url: "https://github.com/2Shabby/Blockchain-based-EHR"
-        summary: "Engineered Ethereum smart contract with 3-tier role-based access control and dual-signature update protocol requiring both doctor and patient consent for record modifications. Built React/Web3.js frontend with MetaMask integration for 5 user workflows: record creation, viewing, sharing, updating, and role assignment. Implemented hybrid storage architecture using IPFS for medical files and on-chain hash storage for integrity verification with event-driven UI communication. 805 LOC (Solidity + React), 9 functions, 3 roles."
+        summary: "Ethereum smart contract with role-based access control and dual-signature update protocol requiring both doctor and patient consent for record modifications. React/Web3.js frontend with MetaMask integration for record creation, viewing, sharing, updating, and role assignment. Hybrid storage using IPFS for medical files and on-chain hash storage for integrity verification."
 
       - slug: virtual-labs
         name: "Virtual Labs"
@@ -226,7 +226,7 @@ categories:
   # NLP & Data Science
   - key: nlp-data-science
     label: "NLP & Data Science"
-    description: "Natural language processing and document analysis"
+    description: "Making sense of text and finding patterns in documents"
     items:
       - slug: document-matching
         name: "Document Matching with NLP"
