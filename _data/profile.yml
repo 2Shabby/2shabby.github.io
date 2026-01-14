@@ -3,32 +3,21 @@
 # Edit this file to update your profile across the site
 
 # Personal Information
-name: "Your Name"
+name: "Mohammad Shahbaz S Shaik"
 handle: "2Shabby"
-tagline: "Developer, Builder, Creator"
-short_bio: "I'm a passionate developer who loves building things for the web. With a focus on clean code, great user experiences, and accessible design, I strive to create software that makes a difference."
+tagline: "Systems & ML Engineer | LLM Infrastructure | Distributed Systems"
+short_bio: "Systems and ML engineer with expertise in distributed systems, LLM infrastructure, and agentic AI. Experienced in building polyglot runtimes, quantum ML pipelines, and edge computing systems. Strong background in low-level systems programming and modern AI architectures."
 
 # Social Links
-# Set to false or remove the line to hide a social link
 social:
   github:
-    username: "yourusername"
-    url: "https://github.com/yourusername"
+    username: "2Shabby"
+    url: "https://github.com/2Shabby"
 
   linkedin:
-    username: "yourusername"
-    url: "https://linkedin.com/in/yourusername"
-
-  twitter:
-    username: "yourusername"
-    url: "https://twitter.com/yourusername"
+    username: "mohd-shahbaz-shaik"
+    url: "https://linkedin.com/in/mohd-shahbaz-shaik"
 
   email:
-    address: "your.email@example.com"
-    url: "mailto:your.email@example.com"
-
-# Optional Additional Links
-# Add any other social/professional links here
-# website: "https://yoursite.com"
-# blog: "https://blog.yoursite.com"
-# mastodon: "https://mastodon.social/@yourusername"
+    address: "shaikmohdshahbaz@gmail.com"
+    url: "mailto:shaikmohdshahbaz@gmail.com"
