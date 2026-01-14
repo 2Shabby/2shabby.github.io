@@ -5,6 +5,10 @@ description: Technical writing, notes, and thoughts on systems and AI.
 permalink: /writing/
 ---
 
+<aside style="background: var(--color-surface); border-left: 3px solid var(--color-accent); padding: 1rem 1.25rem; margin-bottom: 2rem; font-size: 0.9rem;">
+  <strong>Note:</strong> This is the only section of this site written entirely by me, without LLM assistance.
+</aside>
+
 {% if site.posts.size > 0 %}
 <div class="posts-list">
   {% for post in site.posts %}
