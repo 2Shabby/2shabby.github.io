@@ -1,0 +1,55 @@
+{
+  "projects": [
+    {
+      "id": "project-1",
+      "title": "Full-Stack Web App",
+      "description": "A full-stack web application with real-time features, user authentication, and modern architecture.",
+      "image": "assets/img/project-placeholder.svg",
+      "tags": ["React", "Node.js", "WebSocket", "MongoDB"],
+      "demo": "https://example.com/demo1",
+      "repo": "https://github.com/yourusername/project1"
+    },
+    {
+      "id": "project-2",
+      "title": "CLI Automation Tool",
+      "description": "A command-line tool for automating development workflows and improving productivity.",
+      "image": "assets/img/project-placeholder.svg",
+      "tags": ["Python", "CLI", "Automation"],
+      "repo": "https://github.com/yourusername/project2"
+    },
+    {
+      "id": "project-3",
+      "title": "Progressive Web App",
+      "description": "A mobile-first progressive web app with offline support and push notifications.",
+      "image": "assets/img/project-placeholder.svg",
+      "tags": ["PWA", "JavaScript", "Service Worker"],
+      "demo": "https://example.com/demo3",
+      "repo": "https://github.com/yourusername/project3"
+    },
+    {
+      "id": "project-4",
+      "title": "Open Source Library",
+      "description": "A lightweight utility library for common JavaScript operations with zero dependencies.",
+      "image": "assets/img/project-placeholder.svg",
+      "tags": ["TypeScript", "npm", "Open Source"],
+      "demo": "https://example.com/docs",
+      "repo": "https://github.com/yourusername/project4"
+    },
+    {
+      "id": "project-5",
+      "title": "API Integration Platform",
+      "description": "A platform for managing and monitoring third-party API integrations with analytics.",
+      "image": "assets/img/project-placeholder.svg",
+      "tags": ["Python", "FastAPI", "PostgreSQL"],
+      "demo": "https://example.com/demo5"
+    },
+    {
+      "id": "project-6",
+      "title": "Portfolio Template",
+      "description": "This very template! A clean, fast, and accessible GitHub Pages template with zero build step.",
+      "image": "assets/img/project-placeholder.svg",
+      "tags": ["HTML", "CSS", "JavaScript", "GitHub Pages"],
+      "repo": "https://github.com/yourusername/portfolio-template"
+    }
+  ]
+}
