@@ -103,6 +103,7 @@ categories:
         name: "Edge Voice Assistant"
         tagline: "Real-time voice pipeline with VAD, wake word detection, STT, and TTS on ARM"
         status: active
+        repo_url: "https://github.com/Jeeves-Cluster-Organization/voice_radxa_gateway"
         tags:
           - IoT
           - Embedded
@@ -153,6 +154,7 @@ categories:
         name: "Quantum Distillability Witness Learner"
         tagline: "ML pipeline for 3-qubit distillability certification using SVM and Transformers"
         status: past
+        repo_url: "https://github.com/Jeeves-Cluster-Organization/ML_QML_Witness_Generation"
         tags:
           - ML
           - Quantum
