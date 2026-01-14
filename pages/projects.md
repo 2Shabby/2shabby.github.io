@@ -29,4 +29,4 @@ permalink: /projects/
 
 ## Want to collaborate?
 
-I'm always open to interesting projects and collaborations. If you have an idea you'd like to discuss, feel free to [get in touch]({{ '/contact/' | relative_url }}).
+I'm always open to interesting projects and collaborations. If you have an idea you'd like to discuss, feel free to [get in touch]({{ '/about/' | relative_url }}).

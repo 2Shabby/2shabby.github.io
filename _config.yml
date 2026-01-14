@@ -1,10 +1,10 @@
 # Site Settings
 # Main site information
 title: "2Shabby"
-description: "A clean, fast, and accessible personal website built with Jekyll and GitHub Pages."
+description: "Systems & ML Engineer | LLM Infrastructure | Distributed Systems"
 author:
-  name: "Your Name"
-  email: "your.email@example.com"
+  name: "Mohammad Shahbaz S Shaik"
+  email: "shaikmohdshahbaz@gmail.com"
 
 # URL Configuration
 # For user site (username.github.io): url = "https://username.github.io", baseurl = ""
@@ -41,7 +41,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      author: "Your Name"
+      author: "Mohammad Shahbaz S Shaik"
 
 # Exclude from Build
 # These files and directories will not be included in the generated site
@@ -51,7 +51,6 @@ exclude:
   - node_modules/
   - vendor/
   - .bundle/
-  - .sass-cache/
   - .jekyll-cache/
   - gemfiles/
   - "*.gemspec"
@@ -68,11 +67,6 @@ exclude:
 include:
   - _pages
 
-# Sass/SCSS Configuration
-sass:
-  style: compressed
-  sass_dir: _sass
-
 # Plugins (GitHub Pages Safe Only)
 # Only include plugins that are supported by GitHub Pages
 # See: https://pages.github.com/versions/
@@ -86,6 +80,5 @@ collections: {}
 # These will be used in meta tags
 lang: en
 social:
-  github: yourusername
-  twitter: yourusername
-  linkedin: yourusername
+  github: 2Shabby
+  linkedin: mohd-shahbaz-shaik

@@ -121,31 +121,25 @@ You can push directly to GitHub and let GitHub Pages build it. Each push trigger
 │   ├── default.html      # Base layout
 │   ├── page.html         # Standard pages
 │   ├── post.html         # Blog posts
-│   ├── project.html      # Project pages
 │   └── home.html         # Homepage
 ├── _includes/
 │   ├── head.html         # <head> content
-│   ├── meta.html         # SEO/social meta tags
 │   ├── header.html       # Site header
-│   ├── nav.html          # Navigation
+│   ├── nav.html          # Navigation (hardcoded)
 │   ├── footer.html       # Site footer
-│   ├── social-links.html # Social links partial
-│   └── projects-grid.html # Projects grid partial
+│   ├── tag.html          # Tag component
+│   └── project-item.html # Project card component
 ├── _data/
-│   ├── projects.yml      # Project data
-│   ├── social.yml        # Social links
-│   └── navigation.yml    # (Optional) nav config
-├── _posts/               # Blog posts
-│   └── YYYY-MM-DD-title.md
+│   ├── projects.yml      # Projects with categories
+│   └── profile.yml       # Personal info & social links
+├── pages/
+│   ├── about.md          # About page
+│   ├── projects.md       # Projects listing
+│   └── writing.md        # Blog post listing
 ├── assets/
-│   ├── css/style.css     # Main stylesheet
-│   ├── js/main.js        # Optional JavaScript
-│   └── img/              # Images
+│   └── css/
+│       └── site.css      # Main stylesheet
 ├── index.md              # Homepage
-├── about.md              # About page
-├── projects.md           # Projects page
-├── blog.md               # Blog listing
-├── contact.md            # Contact page
 ├── 404.html              # Custom 404 page
 ├── README.md             # This file
 └── LICENSE               # MIT License
@@ -172,62 +166,69 @@ baseurl: ""
 
 ### Navigation
 
-Pages with `nav_order` front matter appear in navigation, sorted by order:
+Navigation is hardcoded in `_includes/nav.html` with 4 items:
+- Home (/)
+- Projects (/projects/)
+- Write-ups (/writing/)
+- About (/about/)
+
+To modify navigation, edit `_includes/nav.html` directly.
+
+### Profile & Social Links
+
+Edit `_data/profile.yml`:
 
 ```yaml
----
-title: About
-nav_order: 2
-nav_title: About Me  # Optional: different nav text
-permalink: /about/
----
+name: "Your Name"
+handle: "yourusername"
+tagline: "Your professional tagline"
+bio: "A longer bio about yourself..."
+
+social:
+  github: "yourusername"
+  linkedin: "yourusername"
+  email: "you@example.com"
 ```
 
 ### Projects
 
-Edit `_data/projects.yml`:
+Edit `_data/projects.yml` with categories and projects:
 
 ```yaml
-- title: My Project
-  description: What it does
-  image: /assets/img/project.png
-  tags:
-    - JavaScript
-    - React
-  demo_url: https://demo.example.com
-  repo_url: https://github.com/user/repo
-  featured: true
-```
-
-### Social Links
-
-Edit `_data/social.yml`:
-
-```yaml
-- name: GitHub
-  url: https://github.com/username
-  icon: "📦"
-
-- name: Email
-  url: mailto:you@example.com
-  icon: "✉️"
+categories:
+  - key: category-slug
+    label: "Category Name"
+    description: "Category description"
+    items:
+      - slug: project-slug
+        name: "Project Name"
+        tagline: "Short description"
+        status: active  # active, maintained, or archived
+        tags:
+          - Python
+          - Go
+        repo_url: "https://github.com/user/repo"
+        homepage_url: "https://demo.example.com"  # Optional
+        summary: "Detailed project description..."
+        featured: true  # Optional: shows on homepage
 ```
 
 ### Theme Colors
 
-Edit `assets/css/style.css` CSS variables:
+Edit `assets/css/site.css` CSS variables:
 
 ```css
 :root {
-  --color-primary: #4361ee;
-  --color-bg: #ffffff;
-  /* ... */
+  --primary: #3b82f6;
+  --bg: #ffffff;
+  --text: #1f2937;
+  /* ... dark mode variables under @media (prefers-color-scheme: dark) */
 }
 ```
 
 ### Adding Blog Posts
 
-Create files in `_posts/` with format `YYYY-MM-DD-title.md`:
+Create `_posts/` directory and add files with format `YYYY-MM-DD-title.md`:
 
 ```yaml
 ---
@@ -236,11 +237,12 @@ title: "My Post Title"
 date: 2024-01-15 10:00:00 -0500
 categories: [category]
 tags: [tag1, tag2]
-author: Your Name
 ---
 
 Post content in Markdown...
 ```
+
+Posts will automatically appear on the `/writing/` page.
 
 ---
 
