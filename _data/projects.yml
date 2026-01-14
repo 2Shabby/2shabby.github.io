@@ -38,7 +38,7 @@ categories:
           - PostgreSQL
           - pgvector
           - DevOps
-        summary: "7-agent LLM pipeline with anti-hallucination Critic agent, citation validation, and bounded reintent cycles for read-only codebase exploration. Analysis tools with deterministic fallback strategies (symbol→grep→semantic) across 10 programming languages using configuration-driven agents. PostgreSQL/pgvector semantic search, gRPC streaming to WebSocket UI, and GPU-accelerated local LLM inference via Docker."
+        summary: "7-agent LLM pipeline with anti-hallucination Critic agent, citation validation, and bounded reintent cycles for read-only codebase exploration. Configuration-driven analysis tools with deterministic fallback strategies (symbol→grep→semantic) adaptable to any language with tree-sitter support. PostgreSQL/pgvector semantic search, gRPC streaming to WebSocket UI, and GPU-accelerated local LLM inference via Docker."
 
       - slug: jeeves-assistant
         name: "AI Personal Assistant Capability"
@@ -167,24 +167,24 @@ categories:
 
       - slug: image-style-transfer
         name: "Image Style Transfer"
-        tagline: "Neural style transfer using deep learning"
+        tagline: "CNN-based artistic style transfer with Gram matrix optimization"
         status: past
         tags:
           - ML
           - Deep Learning
           - Computer Vision
           - Python
-        summary: "Extraction of the style and colors of one image to another using deep learning techniques. Implements neural style transfer algorithms to blend content and style representations from different images."
+        summary: "CNN-based neural style transfer separating content and style representations via VGG feature maps. Gram matrix optimization transfers texture and artistic patterns while preserving structural content. Iterative gradient descent on generated image to minimize combined content and style loss functions."
 
       - slug: quantum-entanglement
         name: "Fully Entangled Fraction"
-        tagline: "Quantum entanglement analysis using Mathematica"
+        tagline: "Entanglement quantification in multi-qubit network states"
         status: past
         tags:
           - Quantum
           - Research
           - Mathematica
-        summary: "Using Mathematica to calculate the Fully Entangled Fraction of various entangled networks. Analyzes quantum entanglement properties and measures the degree of entanglement in multi-qubit systems."
+        summary: "Symbolic computation of Fully Entangled Fraction (FEF) for characterizing entanglement in multi-qubit network topologies. Mathematica implementation analyzing quantum correlations and teleportation fidelity bounds across various graph-state configurations and mixed-state ensembles."
 
   # Web & Blockchain
   - key: web-blockchain
@@ -207,19 +207,19 @@ categories:
 
       - slug: virtual-labs
         name: "Virtual Labs"
-        tagline: "Contributions to Government of India's virtual labs initiative"
+        tagline: "Open source contributions to national educational platform"
         status: past
         tags:
           - Web
           - Open Source
           - Government
           - Education
-        summary: "Fixed bugs in Virtual Labs, a Government of India initiative, and added new functionality and features. Contributed to improving the platform's educational tools and interactive lab simulations for students."
+        summary: "Open source contributions to Virtual Labs, a Government of India initiative providing remote access to laboratory experiments. Bug fixes and feature additions to interactive simulations used by students across Indian universities for hands-on learning in science and engineering disciplines."
 
   # NLP & Data Science
   - key: nlp-data-science
     label: "NLP & Data Science"
-    description: "Making sense of text and finding patterns in documents"
+    description: "Topic modeling, semantic matching, document analysis"
     items:
       - slug: document-matching
         name: "Document Matching with NLP"
