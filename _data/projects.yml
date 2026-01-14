@@ -3,100 +3,240 @@
 # Edit this file to add, remove, or modify projects and categories
 
 categories:
-  # Systems & Infrastructure Projects
-  - key: systems
-    label: "Systems & Infrastructure"
-    description: "Large-scale systems, orchestration, and infrastructure projects"
+  # Agentic & LLM Infrastructure
+  - key: agentic-llm
+    label: "Agentic & LLM Infrastructure"
+    description: "Distributed agentic systems, LLM runtimes, and AI-powered code analysis"
     items:
-      - slug: full-stack-web-app
-        name: "Full-Stack Web App"
-        tagline: "Real-time web application with modern architecture"
+      - slug: jeeves-runtime
+        name: "Jeeves Agentic Runtime"
+        tagline: "Polyglot agentic runtime with Go orchestration and Python LLM layer"
         status: active
         tags:
-          - React
-          - Node.js
-          - WebSocket
-          - MongoDB
-        repo_url: "https://github.com/yourusername/project1"
-        homepage_url: "https://example.com/demo1"
-        summary: "A full-stack web application with real-time features, user authentication, and modern architecture. Built with React for the frontend and Node.js for the backend, featuring WebSocket communication for live updates."
-        subrepos:
-          - name: "Frontend Client"
-            repo_url: "https://github.com/yourusername/project1-frontend"
-            note: "React-based SPA"
-          - name: "Backend API"
-            repo_url: "https://github.com/yourusername/project1-backend"
-            note: "Node.js REST API with WebSocket support"
-
-      - slug: api-integration-platform
-        name: "API Integration Platform"
-        tagline: "Manage and monitor third-party API integrations"
-        status: maintained
-        tags:
+          - Systems
+          - Distributed
+          - LLM
+          - Agentic
           - Python
-          - FastAPI
+          - Go
+          - gRPC
           - PostgreSQL
-        repo_url: "https://github.com/yourusername/project5"
-        homepage_url: "https://example.com/demo5"
-        summary: "A platform for managing and monitoring third-party API integrations with comprehensive analytics and logging capabilities."
+        repo_url: "https://github.com/2Shabby/jeeves"
+        summary: "Architected polyglot agentic runtime with Go orchestration engine, Python LLM layer, gRPC IPC, and 6-provider abstraction (OpenAI, Anthropic, Azure, LlamaServer, LlamaCpp). Implemented microkernel with 4-layer memory architecture, 7-type interrupt/resume system, PostgreSQL checkpoint persistence, and Protocol classes for complete dependency injection. Achieved comprehensive test coverage across 5 architectural layers (L0-L4) with documented contracts and strict import boundaries. 82K LOC (74K Python + 8K Go), 811 tests."
 
-  # Tools & Automation
-  - key: tools
-    label: "Tools & Automation"
-    description: "CLI tools, scripts, and automation utilities"
-    items:
-      - slug: cli-automation-tool
-        name: "CLI Automation Tool"
-        tagline: "Automate development workflows and boost productivity"
+      - slug: jeeves-code-analysis
+        name: "Jeeves Code Analysis Pipeline"
+        tagline: "Multi-agent LLM pipeline for codebase exploration with anti-hallucination"
         status: active
         tags:
+          - LLM
+          - Agentic
+          - NLP
+          - Systems
           - Python
-          - CLI
-          - Automation
-        repo_url: "https://github.com/yourusername/project2"
-        summary: "A command-line tool for automating repetitive development workflows and improving team productivity. Features include project scaffolding, code generation, and deployment automation."
+          - PostgreSQL
+          - pgvector
+          - DevOps
+        repo_url: "https://github.com/2Shabby/jeeves"
+        summary: "Engineered 7-agent LLM pipeline with anti-hallucination Critic agent, citation validation, and bounded reintent cycles for read-only codebase exploration. Built 27 analysis tools with deterministic fallback strategies (symbol→grep→semantic) across 10 programming languages using configuration-driven agents (zero concrete classes). Implemented PostgreSQL/pgvector semantic search, gRPC streaming to WebSocket UI, and GPU-accelerated local LLM inference via Docker multi-stage builds. 23K Python LOC, 358 tests, 27 tools."
 
-  # Web & Mobile Applications
-  - key: webmobile
-    label: "Web & Mobile Apps"
-    description: "Progressive web apps and mobile-first applications"
-    items:
-      - slug: progressive-web-app
-        name: "Progressive Web App"
-        tagline: "Mobile-first PWA with offline support"
+      - slug: jeeves-assistant
+        name: "AI Personal Assistant Capability"
+        tagline: "Modular capability layer with task management, journaling, and reminders"
         status: active
         tags:
-          - PWA
-          - JavaScript
-          - Service Worker
-        repo_url: "https://github.com/yourusername/project3"
-        homepage_url: "https://example.com/demo3"
-        summary: "A mobile-first progressive web app with offline support and push notifications. Provides a native app-like experience on mobile devices while remaining accessible through the browser."
+          - Agentic
+          - LLM
+          - API
+          - PostgreSQL
+          - pgvector
+          - Python
+        repo_url: "https://github.com/2Shabby/jeeves"
+        summary: "Engineered modular capability layer with 24 async Python tools for Kanban task management, semantic-search journaling, and reminder tracking with staleness scoring. Implemented PostgreSQL/pgvector backend with 4 tables, 23 indexes, optimistic locking for concurrent edits, and soft-delete pattern preserving audit history. Built event-driven architecture emitting 14 event types to L2 bus, with capability registration protocol enabling schema, prompts, and tools as self-contained plugin. 3.4K LOC (Python + SQL), 24 tools, 4 tables."
 
-  # Libraries & Open Source
-  - key: opensource
-    label: "Libraries & Open Source"
-    description: "Open source libraries and community contributions"
+  # Systems Programming
+  - key: systems-programming
+    label: "Systems Programming"
+    description: "Low-level systems, operating systems, and compiler development"
     items:
-      - slug: open-source-library
-        name: "Open Source Library"
-        tagline: "Lightweight utility library with zero dependencies"
+      - slug: compiler
+        name: "C Compiler"
+        tagline: "Full compiler implementation with lexer, parser, and x86 code generation"
         status: maintained
         tags:
-          - TypeScript
-          - npm
-          - Open Source
-        repo_url: "https://github.com/yourusername/project4"
-        homepage_url: "https://example.com/docs"
-        summary: "A lightweight utility library for common JavaScript operations with zero dependencies. Fully typed with TypeScript and well-documented for easy integration."
+          - Systems
+          - Compiler
+          - C
+          - x86
+          - Low-level
+        repo_url: "https://github.com/2Shabby/Compiler"
+        summary: "Built a compiler for a subset of C language with complete lexer, parser, semantic analysis, and code generation targeting x86 architecture. Implements core compiler phases including lexical analysis, syntax parsing, semantic validation, intermediate representation, and machine code generation."
 
-      - slug: jekyll-portfolio-template
-        name: "Jekyll Portfolio Template"
-        tagline: "Clean, accessible Jekyll site for GitHub Pages"
+      - slug: linux-shell
+        name: "Linux Shell"
+        tagline: "Bash-like shell implementation with piping, redirection, and system calls"
+        status: maintained
+        tags:
+          - Systems
+          - C
+          - Linux
+          - OS
+          - Low-level
+        repo_url: "https://github.com/2Shabby/LinuxShell"
+        summary: "Developed a Bash-like shell for Linux in C using internal system calls. Supports basic commands, piping, redirection, and custom commands. Implements process management, signal handling, and I/O redirection using low-level POSIX APIs."
+
+      - slug: xv6
+        name: "Xv6 Operating System"
+        tagline: "Process scheduling algorithms in MIT's teaching OS"
+        status: maintained
+        tags:
+          - Systems
+          - OS
+          - Scheduling
+          - C
+          - Low-level
+        repo_url: "https://github.com/2Shabby/XV6"
+        summary: "Implemented multiple process scheduling algorithms in Xv6 Operating System (developed by MIT). Enhanced the kernel's process scheduler with various scheduling policies including priority-based, round-robin, and custom algorithms to optimize system performance."
+
+  # IoT & Embedded Systems
+  - key: iot-embedded
+    label: "IoT & Embedded Systems"
+    description: "Edge computing, voice assistants, and industrial IoT systems"
+    items:
+      - slug: voice-gateway
+        name: "Edge Voice Assistant"
+        tagline: "Real-time voice pipeline with VAD, wake word detection, STT, and TTS on ARM"
         status: active
         tags:
-          - Jekyll
-          - GitHub Pages
-          - Liquid
-        repo_url: "https://github.com/yourusername/portfolio-template"
-        summary: "This very template! A clean, fast, and accessible Jekyll site optimized for GitHub Pages. Features semantic HTML, CSS-only dark mode, and data-driven content."
+          - IoT
+          - Embedded
+          - ML
+          - NLP
+          - Python
+          - ARM
+          - Kubernetes
+          - ONNX
+        repo_url: "https://github.com/2Shabby/voice-gateway"
+        summary: "Engineered real-time voice pipeline with lock-free SPSC ring buffers and multi-threaded ALSA I/O for 48kHz audio on ARM edge devices (Radxa Rock 5). Integrated 4-model ML stack: Silero VAD, DTW-based wake word detection (3-sample enrollment), faster-whisper STT, Kokoro ONNX TTS, with optional RK3588 NPU acceleration. Deployed via Kubernetes with file-based health probes, privileged container access to /dev/snd, and 15 configurable environment variables. 1.4K Python LOC, 4 models, 8 classes."
+
+      - slug: campus-energy
+        name: "Campus Energy Monitoring"
+        tagline: "ESP32-based IoT system with Modbus RTU and Django dashboard"
+        status: active
+        tags:
+          - IoT
+          - Embedded
+          - ESP32
+          - Django
+          - Modbus
+          - FreeRTOS
+          - Hardware
+        repo_url: "https://github.com/2Shabby/campus-energy-monitoring"
+        summary: "Engineered ESP32-based IoT system interfacing with 5 industrial power meters via Modbus RTU protocol, implementing FreeRTOS task queues for non-blocking serial I/O and CRC16 validation. Built Django-Celery dashboard aggregating 12 sensor streams via OneM2M REST API, featuring 9 FusionCharts visualizations including temperature-energy correlation scatter plots. Integrated SI7021 temperature/humidity sensors with hourly data ingestion and automatic 24-hour retention cleanup. 1.8K LOC (Python + C++), 5 meters, 9 charts."
+
+  # Machine Learning & Quantum Computing
+  - key: ml-quantum
+    label: "Machine Learning & Quantum Computing"
+    description: "Quantum state generation, ML classifiers, and physics-informed neural networks"
+    items:
+      - slug: quantum-density-ml
+        name: "Quantum State Generation via ML"
+        tagline: "Physics-constrained GANs/VAEs for valid quantum density matrices"
+        status: maintained
+        tags:
+          - ML
+          - Quantum
+          - Research
+          - Python
+          - GAN
+          - VAE
+          - PyTorch
+        repo_url: "https://github.com/2Shabby/Quantum-State-Generation"
+        summary: "Developed 8 physics-constrained GAN/VAE architectures generating valid 4×4 quantum density matrices using LDL and Cholesky decomposition for structural PSD guarantee. Achieved 100% accuracy on Werner-like teleportation classification across 54 experiments with 12-component physics-informed loss function (PSD, trace, c-bounds, diversity). Implemented batch-optimized quantum operations achieving 10-100× speedup over QuTiP using vectorized PyTorch Kronecker products for Bloch vector extraction. 5.7K Python LOC, 89 tests, 8 generators."
+
+      - slug: quantum-witness-ml
+        name: "Quantum Distillability Witness Learner"
+        tagline: "ML pipeline for 3-qubit distillability certification using SVM and Transformers"
+        status: maintained
+        tags:
+          - ML
+          - Quantum
+          - Research
+          - Python
+          - Transformer
+          - SVM
+          - PyTorch
+        repo_url: "https://github.com/2Shabby/Quantum-Witness-Learner"
+        summary: "Built ML pipeline certifying 3-qubit distillability using SVM and Transformer classifiers achieving 85-100% accuracy on GHZ, W, cluster, and Werner states. Demonstrated 36D restricted Pauli features match 63D full tomography (p=0.15) while reducing measurement settings by 5×, with interpretable witness operators W = Σw_k P_k. Developed NPT/PPT/DPS Level 2 oracle hierarchy with partial transpose across all bipartitions and CVXPY SDP-based symmetric extension testing. 10.8K Python LOC, 99 tests."
+
+      - slug: image-style-transfer
+        name: "Image Style Transfer"
+        tagline: "Neural style transfer using deep learning"
+        status: maintained
+        tags:
+          - ML
+          - Deep Learning
+          - Computer Vision
+          - Python
+        repo_url: "https://github.com/2Shabby/Image-style-transfer"
+        summary: "Extraction of the style and colors of one image to another using deep learning techniques. Implements neural style transfer algorithms to blend content and style representations from different images."
+
+      - slug: quantum-entanglement
+        name: "Fully Entangled Fraction"
+        tagline: "Quantum entanglement analysis using Mathematica"
+        status: maintained
+        tags:
+          - Quantum
+          - Research
+          - Mathematica
+        repo_url: "https://github.com/2Shabby/Fully-entangled-fraction"
+        summary: "Using Mathematica to calculate the Fully Entangled Fraction of various entangled networks. Analyzes quantum entanglement properties and measures the degree of entanglement in multi-qubit systems."
+
+  # Web & Blockchain
+  - key: web-blockchain
+    label: "Web & Blockchain"
+    description: "Decentralized applications and web development projects"
+    items:
+      - slug: healthcare-blockchain
+        name: "Blockchain Electronic Health Records"
+        tagline: "Ethereum smart contract with role-based access and IPFS storage"
+        status: maintained
+        tags:
+          - Blockchain
+          - Web3
+          - Solidity
+          - React
+          - IPFS
+          - Healthcare
+        repo_url: "https://github.com/2Shabby/Blockchain-based-EHR"
+        summary: "Engineered Ethereum smart contract with 3-tier role-based access control and dual-signature update protocol requiring both doctor and patient consent for record modifications. Built React/Web3.js frontend with MetaMask integration for 5 user workflows: record creation, viewing, sharing, updating, and role assignment. Implemented hybrid storage architecture using IPFS for medical files and on-chain hash storage for integrity verification with event-driven UI communication. 805 LOC (Solidity + React), 9 functions, 3 roles."
+
+      - slug: virtual-labs
+        name: "Virtual Labs"
+        tagline: "Contributions to Government of India's virtual labs initiative"
+        status: maintained
+        tags:
+          - Web
+          - Open Source
+          - Government
+          - Education
+        repo_url: "https://github.com/virtual-labs"
+        summary: "Fixed bugs in Virtual Labs, a Government of India initiative, and added new functionality and features. Contributed to improving the platform's educational tools and interactive lab simulations for students."
+
+  # NLP & Data Science
+  - key: nlp-data-science
+    label: "NLP & Data Science"
+    description: "Natural language processing and document analysis"
+    items:
+      - slug: document-matching
+        name: "Document Matching with NLP"
+        tagline: "LDA-based document scoring and keyword extraction"
+        status: maintained
+        tags:
+          - ML
+          - NLP
+          - Research
+          - Python
+          - LDA
+        repo_url: "https://github.com/2Shabby/Document-matching-using-NLP"
+        summary: "Given sets of papers and contexts, assigning scores of (0,1) to combinations. Extract keywords, and apply LDA (Latent Dirichlet Allocation) on data to assign relevance scores. Implements topic modeling techniques to match research papers with related abstracts or contexts."
