@@ -10,7 +10,7 @@ categories:
     items:
       - slug: jeeves-runtime
         name: "Jeeves Agentic Runtime"
-        tagline: "Polyglot agentic runtime with Go orchestration and Python LLM layer"
+        tagline: "Interruptible agent execution with checkpoint persistence"
         status: active
         repo_url: "https://github.com/Jeeves-Cluster-Organization/jeeves-core"
         tags:
@@ -22,11 +22,11 @@ categories:
           - Go
           - gRPC
           - PostgreSQL
-        summary: "Polyglot agentic runtime with Go orchestration engine, Python LLM layer, gRPC IPC, and 6-provider abstraction (OpenAI, Anthropic, Azure, LlamaServer, LlamaCpp). Microkernel with 4-layer memory architecture, 7-type interrupt/resume system, PostgreSQL checkpoint persistence, and Protocol classes for dependency injection. Tested across 5 architectural layers (L0-L4) with documented contracts and import boundaries."
+        summary: "Go orchestration with Python LLM layer communicating via gRPC. Microkernel architecture with interrupt/resume system and PostgreSQL checkpoint persistence. Provider abstraction supporting OpenAI, Anthropic, Azure, and local inference. Layered design (L0-L4) with documented contracts and import boundaries."
 
       - slug: jeeves-code-analysis
         name: "Jeeves Code Analysis Pipeline"
-        tagline: "Multi-agent LLM pipeline for codebase exploration with anti-hallucination"
+        tagline: "Read-only codebase exploration with citation validation"
         status: active
         repo_url: "https://github.com/Jeeves-Cluster-Organization/jeeves-capability-code-analysis"
         tags:
@@ -38,11 +38,11 @@ categories:
           - PostgreSQL
           - pgvector
           - DevOps
-        summary: "7-agent LLM pipeline with anti-hallucination Critic agent, citation validation, and bounded reintent cycles for read-only codebase exploration. Configuration-driven analysis tools with deterministic fallback strategies (symbol→grep→semantic) adaptable to any language with tree-sitter support. PostgreSQL/pgvector semantic search, gRPC streaming to WebSocket UI, and GPU-accelerated local LLM inference via Docker."
+        summary: "Multi-agent pipeline where a Critic agent validates citations and triggers bounded reintent cycles on hallucination. Deterministic fallback strategies (symbol→grep→semantic) using tree-sitter for language-agnostic parsing. pgvector semantic search, gRPC streaming to WebSocket UI, and containerized local LLM inference."
 
       - slug: jeeves-assistant
         name: "AI Personal Assistant Capability"
-        tagline: "Modular capability layer with task management, journaling, and reminders"
+        tagline: "Plugin architecture for agent capabilities"
         status: active
         tags:
           - Agentic
@@ -51,7 +51,7 @@ categories:
           - PostgreSQL
           - pgvector
           - Python
-        summary: "Modular capability layer with async Python tools for Kanban task management, semantic-search journaling, and reminder tracking with staleness scoring. PostgreSQL/pgvector backend with optimistic locking for concurrent edits and soft-delete pattern preserving audit history. Event-driven architecture with capability registration protocol enabling schema, prompts, and tools as self-contained plugin."
+        summary: "Self-contained capability plugin providing task management, journaling, and reminders. Semantic search over journal entries via pgvector. Optimistic locking for concurrent edits and soft-delete preserving audit history. Capability registration protocol packages schema, prompts, and tools together."
 
   # Systems Programming
   - key: systems-programming
@@ -60,7 +60,7 @@ categories:
     items:
       - slug: compiler
         name: "C Compiler"
-        tagline: "Full compiler implementation with lexer, parser, and x86 code generation"
+        tagline: "From source to x86 machine code"
         status: past
         tags:
           - Systems
@@ -68,11 +68,11 @@ categories:
           - C
           - x86
           - Low-level
-        summary: "Compiler for a subset of C with lexer, parser, semantic analysis, and code generation targeting x86. Covers core compiler phases: lexical analysis, syntax parsing, semantic validation, intermediate representation, and machine code generation."
+        summary: "Compiler for a subset of C covering lexical analysis, recursive descent parsing, type checking, and x86 code generation. Implements core phases from tokenization through semantic validation to executable output."
 
       - slug: linux-shell
         name: "Linux Shell"
-        tagline: "Bash-like shell implementation with piping, redirection, and system calls"
+        tagline: "Process control via POSIX system calls"
         status: past
         tags:
           - Systems
@@ -80,11 +80,11 @@ categories:
           - Linux
           - OS
           - Low-level
-        summary: "Bash-like shell for Linux in C using system calls. Supports basic commands, piping, redirection, and custom commands. Process management, signal handling, and I/O redirection via low-level POSIX APIs."
+        summary: "Shell implementation in C with piping, I/O redirection, and job control. Uses fork/exec for process creation, dup2 for file descriptor manipulation, and signal handlers for job management."
 
       - slug: xv6
         name: "Xv6 Operating System"
-        tagline: "Process scheduling algorithms in MIT's teaching OS"
+        tagline: "Kernel modifications to MIT's teaching OS"
         status: past
         tags:
           - Systems
@@ -92,7 +92,7 @@ categories:
           - Scheduling
           - C
           - Low-level
-        summary: "Process scheduling algorithms in Xv6 (MIT's teaching OS). Various scheduling policies including priority-based, round-robin, and custom algorithms."
+        summary: "Implemented process scheduling policies in xv6 kernel: priority-based scheduling with aging, round-robin with configurable quantum, and lottery scheduling with ticket-based fairness."
 
   # IoT & Embedded Systems
   - key: iot-embedded
@@ -101,7 +101,7 @@ categories:
     items:
       - slug: voice-gateway
         name: "Edge Voice Assistant"
-        tagline: "Real-time voice pipeline with VAD, wake word detection, STT, and TTS on ARM"
+        tagline: "Local speech processing on ARM with NPU acceleration"
         status: active
         repo_url: "https://github.com/Jeeves-Cluster-Organization/voice_radxa_gateway"
         tags:
@@ -113,11 +113,11 @@ categories:
           - ARM
           - Kubernetes
           - ONNX
-        summary: "Real-time voice pipeline with lock-free SPSC ring buffers and multi-threaded ALSA I/O for 48kHz audio on ARM edge devices (Radxa Rock 5). ML stack: Silero VAD, DTW-based wake word detection, faster-whisper STT, Kokoro ONNX TTS, with optional RK3588 NPU acceleration. Deployed via Kubernetes with file-based health probes."
+        summary: "Voice pipeline on Radxa Rock 5 using lock-free ring buffers for 48kHz ALSA I/O. Silero VAD, DTW wake word detection, faster-whisper STT, and Kokoro TTS with optional RK3588 NPU offload. Kubernetes deployment with health probes."
 
       - slug: campus-energy
         name: "Campus Energy Monitoring"
-        tagline: "ESP32-based IoT system with Modbus RTU and Django dashboard"
+        tagline: "Industrial power meters to web dashboard"
         status: active
         repo_url: "https://github.com/2Shabby/ESW"
         tags:
@@ -128,7 +128,7 @@ categories:
           - Modbus
           - FreeRTOS
           - Hardware
-        summary: "ESP32-based IoT system interfacing with industrial power meters via Modbus RTU, using FreeRTOS task queues for non-blocking serial I/O and CRC16 validation. Django-Celery dashboard aggregating sensor streams via OneM2M REST API, with visualizations including temperature-energy correlation scatter plots. SI7021 temperature/humidity sensors with hourly data ingestion."
+        summary: "ESP32 reading industrial power meters via Modbus RTU with FreeRTOS task queues for non-blocking I/O. Django-Celery backend aggregating sensor streams through OneM2M API. SI7021 temperature/humidity sensors with correlation visualizations."
 
   # Machine Learning & Quantum Computing
   - key: ml-quantum
@@ -137,7 +137,7 @@ categories:
     items:
       - slug: quantum-density-ml
         name: "Quantum State Generation via ML"
-        tagline: "Physics-constrained GANs/VAEs for valid quantum density matrices"
+        tagline: "Generating valid density matrices with structural guarantees"
         status: past
         repo_url: "https://github.com/2Shabby/broadcastability_ml_project"
         tags:
@@ -148,11 +148,11 @@ categories:
           - GAN
           - VAE
           - PyTorch
-        summary: "Physics-constrained GAN/VAE architectures generating valid 4×4 quantum density matrices using LDL and Cholesky decomposition for structural PSD guarantee. Physics-informed loss function covering PSD, trace, c-bounds, and diversity constraints. Batch-optimized quantum operations using vectorized PyTorch Kronecker products for Bloch vector extraction."
+        summary: "GAN/VAE architectures outputting 4×4 density matrices via Cholesky decomposition, guaranteeing positive semidefiniteness by construction. Loss function enforces trace normalization and broadcastability bounds. Vectorized Kronecker products for batch Bloch vector extraction."
 
       - slug: quantum-witness-ml
         name: "Quantum Distillability Witness Learner"
-        tagline: "ML pipeline for 3-qubit distillability certification using SVM and Transformers"
+        tagline: "Learning entanglement witnesses from measurement data"
         status: past
         repo_url: "https://github.com/Jeeves-Cluster-Organization/ML_QML_Witness_Generation"
         tags:
@@ -163,18 +163,18 @@ categories:
           - Transformer
           - SVM
           - PyTorch
-        summary: "ML pipeline certifying 3-qubit distillability using SVM and Transformer classifiers on GHZ, W, cluster, and Werner states. Restricted Pauli features match full tomography while reducing measurement settings, with interpretable witness operators. NPT/PPT/DPS Level 2 oracle hierarchy with partial transpose across all bipartitions and CVXPY SDP-based symmetric extension testing."
+        summary: "SVM and Transformer classifiers certifying 3-qubit distillability on GHZ, W, cluster, and Werner states. Restricted Pauli features reduce required measurements while matching tomography accuracy. Oracle hierarchy using partial transpose and SDP-based symmetric extension (DPS Level 2)."
 
       - slug: image-style-transfer
         name: "Image Style Transfer"
-        tagline: "CNN-based artistic style transfer with Gram matrix optimization"
+        tagline: "Transferring artistic texture while preserving structure"
         status: past
         tags:
           - ML
           - Deep Learning
           - Computer Vision
           - Python
-        summary: "CNN-based neural style transfer separating content and style representations via VGG feature maps. Gram matrix optimization transfers texture and artistic patterns while preserving structural content. Iterative gradient descent on generated image to minimize combined content and style loss functions."
+        summary: "Neural style transfer using VGG feature maps to separate content and style. Gram matrices capture texture statistics; gradient descent on the generated image minimizes combined content/style loss."
 
       - slug: quantum-entanglement
         name: "Fully Entangled Fraction"
@@ -193,7 +193,7 @@ categories:
     items:
       - slug: healthcare-blockchain
         name: "Blockchain Electronic Health Records"
-        tagline: "Ethereum smart contract with role-based access and IPFS storage"
+        tagline: "Dual-signature consent for medical record updates"
         status: past
         repo_url: "https://github.com/2Shabby/medical-records"
         tags:
@@ -203,7 +203,7 @@ categories:
           - React
           - IPFS
           - Healthcare
-        summary: "Ethereum smart contract with role-based access control and dual-signature update protocol requiring both doctor and patient consent for record modifications. React/Web3.js frontend with MetaMask integration for record creation, viewing, sharing, updating, and role assignment. Hybrid storage using IPFS for medical files and on-chain hash storage for integrity verification."
+        summary: "Solidity contract requiring both doctor and patient signatures for record modifications. IPFS stores files; on-chain hashes verify integrity. React frontend with MetaMask for role-based access control."
 
       - slug: virtual-labs
         name: "Virtual Labs"
@@ -223,7 +223,7 @@ categories:
     items:
       - slug: document-matching
         name: "Document Matching with NLP"
-        tagline: "LDA-based document scoring and keyword extraction"
+        tagline: "Relevance scoring between papers and contexts"
         status: past
         tags:
           - ML
@@ -231,4 +231,4 @@ categories:
           - Research
           - Python
           - LDA
-        summary: "Given sets of papers and contexts, assigning scores of (0,1) to combinations. Extract keywords, and apply LDA (Latent Dirichlet Allocation) on data to assign relevance scores. Implements topic modeling techniques to match research papers with related abstracts or contexts."
+        summary: "Topic modeling pipeline using LDA to score paper-context relevance. Keyword extraction and topic distributions produce interpretable similarity scores for matching research papers to related abstracts."
