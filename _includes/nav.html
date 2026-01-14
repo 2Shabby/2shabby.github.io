@@ -1,12 +1,31 @@
 <nav class="main-nav" aria-label="Main navigation">
-  <ul class="nav-links" id="nav-menu">
-    {% assign nav_pages = site.pages | where_exp: "item", "item.nav_order" | sort: "nav_order" %}
-    {% for nav_page in nav_pages %}
+  <ul class="nav-links">
     <li>
-      <a href="{{ nav_page.url | relative_url }}"{% if page.url == nav_page.url %} class="active" aria-current="page"{% endif %}>
-        {{ nav_page.nav_title | default: nav_page.title | escape }}
+      <a href="{{ '/' | relative_url }}"{% if page.url == '/' or page.url == '/index.html' %} class="active" aria-current="page"{% endif %}>
+        Home
       </a>
     </li>
-    {% endfor %}
+    <li>
+      <a href="{{ '/projects/' | relative_url }}"{% if page.url contains '/projects' %} class="active" aria-current="page"{% endif %}>
+        Projects
+      </a>
+    </li>
+    <li>
+      <a href="{{ '/about/' | relative_url }}"{% if page.url contains '/about' %} class="active" aria-current="page"{% endif %}>
+        About
+      </a>
+    </li>
+    {% if site.posts.size > 0 %}
+    <li>
+      <a href="{{ '/blog/' | relative_url }}"{% if page.url contains '/blog' or page.layout == 'post' %} class="active" aria-current="page"{% endif %}>
+        Blog
+      </a>
+    </li>
+    {% endif %}
+    <li>
+      <a href="{{ '/contact/' | relative_url }}"{% if page.url contains '/contact' %} class="active" aria-current="page"{% endif %}>
+        Contact
+      </a>
+    </li>
   </ul>
 </nav>

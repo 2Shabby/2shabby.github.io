@@ -1,19 +1,16 @@
 ---
 layout: default
 ---
-<article class="page">
+
+<article class="page{% if page.narrow %} page-narrow{% endif %}">
   <header class="page-header">
-    <div class="container">
-      <h1>{{ page.title | escape }}</h1>
-      {% if page.description %}
-      <p class="lead">{{ page.description | escape }}</p>
-      {% endif %}
-    </div>
+    <h1 class="page-title">{{ page.title }}</h1>
+    {% if page.description %}
+    <p class="page-lead">{{ page.description }}</p>
+    {% endif %}
   </header>
-  
-  <section class="page-content">
-    <div class="container {% if page.narrow %}container-narrow{% endif %}">
-      {{ content }}
-    </div>
-  </section>
+
+  <div class="page-content">
+    {{ content }}
+  </div>
 </article>

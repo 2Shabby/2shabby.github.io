@@ -1,15 +1,14 @@
 ---
-layout: default
+layout: page
 title: Page Not Found
+description: The page you're looking for doesn't exist.
 permalink: /404.html
 sitemap: false
+narrow: true
 ---
 
-<section class="error-page">
-  <div class="container text-center">
-    <span class="error-code" aria-hidden="true">404</span>
-    <h1>Page Not Found</h1>
-    <p class="lead">Sorry, the page you're looking for doesn't exist or has been moved.</p>
-    <a href="{{ '/' | relative_url }}" class="btn btn-primary">Return to Homepage</a>
-  </div>
-</section>
+<div class="text-center">
+  <p style="font-size: 4rem; font-weight: 700; margin: 2rem 0; color: var(--color-text-muted);">404</p>
+  <p style="font-size: 1.25rem; margin-bottom: 2rem;">Sorry, the page you're looking for doesn't exist or has been moved.</p>
+  <a href="{{ '/' | relative_url }}" class="btn btn-primary">Return to Homepage</a>
+</div>

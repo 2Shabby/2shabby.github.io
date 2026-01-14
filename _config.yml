@@ -1,55 +1,50 @@
-# Site settings
-title: My Site
-description: A clean, fast, and accessible personal website built with Jekyll.
+# Site Settings
+# Main site information
+title: "2Shabby"
+description: "A clean, fast, and accessible personal website built with Jekyll and GitHub Pages."
 author:
-  name: Your Name
-  email: your.email@example.com
+  name: "Your Name"
+  email: "your.email@example.com"
 
-# URL settings
+# URL Configuration
 # For user site (username.github.io): url = "https://username.github.io", baseurl = ""
 # For project site (username.github.io/repo): url = "https://username.github.io", baseurl = "/repo"
 url: "https://2shabby.github.io"
 baseurl: ""  # Leave empty for user sites, set to "/repo-name" for project sites
 
-# Build settings
+# Build Settings
 markdown: kramdown
 kramdown:
   input: GFM
   hard_wrap: false
   syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    default_lang: text
 
-# Permalink style
-permalink: /blog/:year/:month/:day/:title/
+# Permalink Style
+permalink: pretty
 
 # Timezone
 timezone: America/New_York
 
-# Collections
-collections:
-  projects:
-    output: true
-    permalink: /projects/:name/
-
-# Default front matter
+# Default Front Matter
 defaults:
+  # All pages
   - scope:
       path: ""
       type: "pages"
     values:
       layout: "page"
+  # All posts
   - scope:
       path: ""
       type: "posts"
     values:
       layout: "post"
       author: "Your Name"
-  - scope:
-      path: ""
-      type: "projects"
-    values:
-      layout: "project"
 
-# Exclude from build
+# Exclude from Build
+# These files and directories will not be included in the generated site
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -58,21 +53,39 @@ exclude:
   - .bundle/
   - .sass-cache/
   - .jekyll-cache/
+  - gemfiles/
   - "*.gemspec"
   - README.md
   - LICENSE
   - CHANGELOG.md
   - Makefile
   - scripts/
+  - tmp/
+  - .git/
+  - .gitignore
 
-# Include dotfiles if needed
+# Include specific files/directories
 include:
-  - .nojekyll
+  - _pages
 
-# Sass settings
+# Sass/SCSS Configuration
 sass:
   style: compressed
   sass_dir: _sass
 
-# Plugins (only GitHub Pages safe plugins)
+# Plugins (GitHub Pages Safe Only)
+# Only include plugins that are supported by GitHub Pages
+# See: https://pages.github.com/versions/
 plugins: []
+
+# Collections
+# Disabled collections since we're using data-driven approach
+collections: {}
+
+# SEO and Social
+# These will be used in meta tags
+lang: en
+social:
+  github: yourusername
+  twitter: yourusername
+  linkedin: yourusername

@@ -43,7 +43,7 @@ The source code is available on [GitHub](https://github.com/yourusername/youruse
 
 ---
 
-<div class="cta-buttons">
+<div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem;">
   <a href="{{ '/projects/' | relative_url }}" class="btn btn-primary">View My Projects</a>
   <a href="{{ '/contact/' | relative_url }}" class="btn btn-secondary">Get In Touch</a>
 </div>
