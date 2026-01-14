@@ -11,7 +11,20 @@ I'd love to hear from you! Whether you have a question, want to collaborate, or 
 
 ## Connect With Me
 
-{% include social-links.html %}
+<ul class="social-links" style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.5rem;">
+{% if site.data.profile.social.github %}
+  <li><a href="{{ site.data.profile.social.github.url }}" target="_blank" rel="noopener noreferrer">GitHub - {{ site.data.profile.social.github.username }}</a></li>
+{% endif %}
+{% if site.data.profile.social.linkedin %}
+  <li><a href="{{ site.data.profile.social.linkedin.url }}" target="_blank" rel="noopener noreferrer">LinkedIn - {{ site.data.profile.social.linkedin.username }}</a></li>
+{% endif %}
+{% if site.data.profile.social.twitter %}
+  <li><a href="{{ site.data.profile.social.twitter.url }}" target="_blank" rel="noopener noreferrer">Twitter - @{{ site.data.profile.social.twitter.username }}</a></li>
+{% endif %}
+{% if site.data.profile.social.email %}
+  <li><a href="{{ site.data.profile.social.email.url }}">Email - {{ site.data.profile.social.email.address }}</a></li>
+{% endif %}
+</ul>
 
 ## Send a Message
 
