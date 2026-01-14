@@ -6,7 +6,7 @@ categories:
   # Agentic & LLM Infrastructure
   - key: agentic-llm
     label: "Agentic & LLM Infrastructure"
-    description: "Explorations in distributed agents, language model runtimes, and code understanding"
+    description: "Distributed agents, LLM runtimes, code analysis"
     items:
       - slug: jeeves-runtime
         name: "Jeeves Agentic Runtime"
@@ -57,7 +57,7 @@ categories:
   # Systems Programming
   - key: systems-programming
     label: "Systems Programming"
-    description: "Low-level explorations—compilers, operating systems, the machinery underneath"
+    description: "Compilers, operating systems, low-level code"
     items:
       - slug: compiler
         name: "C Compiler"
@@ -101,7 +101,7 @@ categories:
   # IoT & Embedded Systems
   - key: iot-embedded
     label: "IoT & Embedded Systems"
-    description: "Where software meets the physical—edge devices, sensors, voices"
+    description: "Edge devices, voice assistants, sensor systems"
     items:
       - slug: voice-gateway
         name: "Edge Voice Assistant"
@@ -137,7 +137,7 @@ categories:
   # Machine Learning & Quantum Computing
   - key: ml-quantum
     label: "Machine Learning & Quantum Computing"
-    description: "Questions at the edge of what's computable—quantum states, physics-aware learning"
+    description: "Quantum state generation, ML classifiers, physics-informed networks"
     items:
       - slug: quantum-density-ml
         name: "Quantum State Generation via ML"
