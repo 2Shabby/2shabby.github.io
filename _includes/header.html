@@ -1,0 +1,18 @@
+<header class="site-header" role="banner">
+  <div class="header-inner">
+    <a href="{{ '/' | relative_url }}" class="site-logo" rel="home">
+      {{ site.title | escape }}
+    </a>
+    
+    {% include nav.html %}
+    
+    <button class="theme-toggle" aria-label="Toggle dark mode" title="Toggle theme">
+      <span class="icon-sun" aria-hidden="true">☀️</span>
+      <span class="icon-moon" aria-hidden="true">🌙</span>
+    </button>
+    
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
+      <span class="hamburger" aria-hidden="true"></span>
+    </button>
+  </div>
+</header>

@@ -1,0 +1,78 @@
+# Site settings
+title: My Site
+description: A clean, fast, and accessible personal website built with Jekyll.
+author:
+  name: Your Name
+  email: your.email@example.com
+
+# URL settings
+# For user site (username.github.io): url = "https://username.github.io", baseurl = ""
+# For project site (username.github.io/repo): url = "https://username.github.io", baseurl = "/repo"
+url: "https://2shabby.github.io"
+baseurl: ""  # Leave empty for user sites, set to "/repo-name" for project sites
+
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+
+# Permalink style
+permalink: /blog/:year/:month/:day/:title/
+
+# Timezone
+timezone: America/New_York
+
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Your Name"
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/
+  - .bundle/
+  - .sass-cache/
+  - .jekyll-cache/
+  - "*.gemspec"
+  - README.md
+  - LICENSE
+  - CHANGELOG.md
+  - Makefile
+  - scripts/
+
+# Include dotfiles if needed
+include:
+  - .nojekyll
+
+# Sass settings
+sass:
+  style: compressed
+  sass_dir: _sass
+
+# Plugins (only GitHub Pages safe plugins)
+plugins: []

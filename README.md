@@ -1,298 +1,327 @@
-# GitHub Pages Template
+# Jekyll GitHub Pages Template
 
-A clean, fast, and accessible personal homepage template for GitHub Pages. Zero build step required.
-
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
+A clean, fast, and accessible Jekyll site template optimized for GitHub Pages' built-in build pipeline. **No custom GitHub Actions required.**
 
 ## Features
 
-- ✅ **Zero Build Step** - Pure HTML, CSS, and JavaScript
-- ✅ **Light/Dark Mode** - Respects system preference with manual toggle
+- ✅ **GitHub Pages Native** - Uses Jekyll built-in to GitHub Pages
+- ✅ **Zero Plugins** - Maximum compatibility, no unsupported dependencies
+- ✅ **Light & Dark Mode** - CSS-only with optional JS toggle
 - ✅ **Mobile First** - Responsive design for all devices
-- ✅ **Accessible** - Semantic HTML with proper ARIA labels
-- ✅ **Modular** - Shared header/footer components
-- ✅ **Portable** - Works at root or under any subpath
-- ✅ **Fast** - No heavy frameworks or external CDN dependencies
-- ✅ **SEO Ready** - Proper meta tags and semantic structure
+- ✅ **Accessible** - Semantic HTML, ARIA labels, skip links
+- ✅ **SEO Ready** - Open Graph, Twitter Cards, canonical URLs
+- ✅ **Data-Driven** - Projects and social links from YAML files
+- ✅ **Baseurl Safe** - Works at root or any subpath
+
+---
 
 ## Quick Start
 
-### As a User Site (username.github.io)
+### Publishing as a User Site (username.github.io)
 
-1. **Fork or clone this repository**
+1. **Create repository** named exactly `username.github.io`
+
+2. **Clone and customize:**
    ```bash
-   git clone https://github.com/yourusername/yourusername.github.io.git
-   cd yourusername.github.io
+   git clone https://github.com/username/username.github.io.git
+   cd username.github.io
    ```
 
-2. **Customize your content** (see [Customization](#customization) below)
+3. **Edit `_config.yml`:**
+   ```yaml
+   url: "https://username.github.io"
+   baseurl: ""  # Leave empty for user sites
+   title: "Your Site Title"
+   description: "Your site description"
+   ```
 
-3. **Push to GitHub**
+4. **Push to GitHub:**
    ```bash
    git add .
-   git commit -m "Customize site"
+   git commit -m "Initial setup"
    git push origin main
    ```
 
-4. **Enable GitHub Pages**
-   - Go to repository **Settings** → **Pages**
+5. **Enable GitHub Pages:**
+   - Go to **Settings** → **Pages**
    - Source: **Deploy from a branch**
    - Branch: **main** / **(root)**
    - Click **Save**
 
-5. **Your site is live!**
-   - Visit: `https://yourusername.github.io`
+6. **Wait 1-2 minutes** and visit `https://username.github.io`
 
-### As a Project Site (username.github.io/repo-name)
+### Publishing as a Project Site (username.github.io/repo-name)
 
-1. **Copy this template to your project repository**
+1. **Create or use existing repository**
 
-2. **The template automatically detects the subpath** - no configuration needed!
+2. **Edit `_config.yml`:**
+   ```yaml
+   url: "https://username.github.io"
+   baseurl: "/repo-name"  # Must match your repository name
+   title: "Your Site Title"
+   ```
 
-3. **Enable GitHub Pages**
-   - Go to repository **Settings** → **Pages**
-   - Source: **Deploy from a branch**
-   - Branch: **main** / **(root)**
+3. **Push and enable Pages** (same as above)
 
-4. **Your site is live!**
-   - Visit: `https://yourusername.github.io/repo-name`
+4. **Visit** `https://username.github.io/repo-name`
+
+---
+
+## Important: Baseurl Configuration
+
+The `baseurl` setting is critical for links and assets to work correctly:
+
+| Site Type | url | baseurl |
+|-----------|-----|---------|
+| User site | `https://username.github.io` | `""` (empty) |
+| Project site | `https://username.github.io` | `"/repo-name"` |
+| Custom domain | `https://yourdomain.com` | `""` (empty) |
+
+**All internal links use `relative_url` filter**, so changing baseurl automatically updates all paths.
+
+---
 
 ## Local Development
 
-### Using Python (recommended)
+### Prerequisites
+
+- Ruby 2.7+ 
+- Bundler (`gem install bundler`)
+
+### Setup
 
 ```bash
-# Python 3
-python -m http.server 8000
+# Install dependencies
+bundle install
 
-# Python 2
-python -m SimpleHTTPServer 8000
+# Run local server
+bundle exec jekyll serve
+
+# With drafts
+bundle exec jekyll serve --drafts
+
+# With live reload
+bundle exec jekyll serve --livereload
 ```
 
-Then open: http://localhost:8000
+Visit `http://localhost:4000` (or `http://localhost:4000/repo-name` for project sites).
 
-### Using the helper script
+### Without Ruby (Quick Preview)
 
-```bash
-chmod +x scripts/serve-local.sh
-./scripts/serve-local.sh 8000
-```
+You can push directly to GitHub and let GitHub Pages build it. Each push triggers a build.
 
-### Other options
-
-```bash
-# Node.js
-npx serve
-
-# PHP
-php -S localhost:8000
-```
-
-### Opening files directly
-
-You can also open `index.html` directly in your browser. The template is designed to work with the `file://` protocol, though some features (like component loading) work best with a local server.
+---
 
 ## File Structure
 
 ```
 /
-├── index.html              # Homepage
-├── 404.html                # Custom 404 page (GitHub Pages)
+├── _config.yml           # Site configuration
+├── _layouts/
+│   ├── default.html      # Base layout
+│   ├── page.html         # Standard pages
+│   ├── post.html         # Blog posts
+│   ├── project.html      # Project pages
+│   └── home.html         # Homepage
+├── _includes/
+│   ├── head.html         # <head> content
+│   ├── meta.html         # SEO/social meta tags
+│   ├── header.html       # Site header
+│   ├── nav.html          # Navigation
+│   ├── footer.html       # Site footer
+│   ├── social-links.html # Social links partial
+│   └── projects-grid.html # Projects grid partial
+├── _data/
+│   ├── projects.yml      # Project data
+│   ├── social.yml        # Social links
+│   └── navigation.yml    # (Optional) nav config
+├── _posts/               # Blog posts
+│   └── YYYY-MM-DD-title.md
 ├── assets/
-│   ├── css/
-│   │   └── style.css       # Main stylesheet with CSS variables
-│   ├── js/
-│   │   ├── base-path.js    # Automatic base path detection
-│   │   ├── components.js   # Component loader (header/footer)
-│   │   └── main.js         # Theme toggle, projects loader
-│   └── img/
-│       └── project-placeholder.svg
-├── pages/
-│   ├── about.html          # About page
-│   ├── projects.html       # Projects portfolio
-│   └── contact.html        # Contact form
-├── components/
-│   ├── header.html         # Shared header/navigation
-│   └── footer.html         # Shared footer
-├── data/
-│   └── projects.json       # Project data (source of truth)
-├── scripts/
-│   ├── serve-local.sh      # Local development server
-│   └── validate-links.sh   # Link validation script
-├── .github/
-│   └── workflows/
-│       └── deploy.yml      # Optional GitHub Actions workflow
-├── README.md               # This file
-└── LICENSE                 # MIT License
+│   ├── css/style.css     # Main stylesheet
+│   ├── js/main.js        # Optional JavaScript
+│   └── img/              # Images
+├── index.md              # Homepage
+├── about.md              # About page
+├── projects.md           # Projects page
+├── blog.md               # Blog listing
+├── contact.md            # Contact page
+├── 404.html              # Custom 404 page
+├── README.md             # This file
+└── LICENSE               # MIT License
 ```
-
-## Customization
-
-### 1. Update Site Name and Branding
-
-**components/header.html:**
-```html
-<a href="{{PATH}}index.html" class="site-logo">Your Name</a>
-```
-
-**All HTML files - update `<title>` tags:**
-```html
-<title>Home | Your Site Name</title>
-```
-
-### 2. Update Personal Information
-
-**pages/about.html:**
-- Replace the placeholder image with your photo
-- Update bio, skills, and experience sections
-
-**pages/contact.html:**
-- Update social media links
-- Replace `your.email@example.com` with your email
-- Connect the form to a service like [Formspree](https://formspree.io) or [Netlify Forms](https://www.netlify.com/products/forms/)
-
-**components/footer.html:**
-- Update social media links
-- Update copyright information
-
-### 3. Add Your Projects
-
-Edit `data/projects.json`:
-
-```json
-{
-  "projects": [
-    {
-      "id": "my-project",
-      "title": "My Awesome Project",
-      "description": "A brief description of what this project does.",
-      "image": "assets/img/my-project.png",
-      "tags": ["JavaScript", "React", "Node.js"],
-      "demo": "https://myproject.example.com",
-      "repo": "https://github.com/username/my-project"
-    }
-  ]
-}
-```
-
-**Project fields:**
-| Field | Required | Description |
-|-------|----------|-------------|
-| `id` | Yes | Unique identifier |
-| `title` | Yes | Project name |
-| `description` | Yes | Brief description |
-| `image` | No | Path to screenshot (relative to root) |
-| `tags` | No | Array of technology tags |
-| `demo` | No | Live demo URL |
-| `repo` | No | Source code URL |
-
-### 4. Customize Theme Colors
-
-Edit `assets/css/style.css`:
-
-```css
-:root {
-    /* Light mode colors */
-    --color-primary: #4361ee;
-    --color-primary-hover: #3651d4;
-    --color-accent: #f72585;
-    /* ... */
-}
-
-[data-theme="dark"] {
-    /* Dark mode colors */
-    --color-primary: #7b8cff;
-    --color-primary-hover: #a5b4fc;
-    /* ... */
-}
-```
-
-### 5. Add New Pages
-
-1. Create a new file in `pages/` directory
-2. Copy the structure from an existing page
-3. Update `components/header.html` and `components/footer.html` with the new navigation link
-
-## How It Works
-
-### Base Path Detection
-
-The template automatically detects whether it's running at:
-- **Root** (user site): `https://username.github.io/`
-- **Subpath** (project site): `https://username.github.io/repo-name/`
-
-This is handled by `assets/js/base-path.js`. No manual configuration is needed.
-
-### Component Loading
-
-Header and footer are loaded dynamically via JavaScript (`assets/js/components.js`). If JavaScript is disabled:
-- A fallback navigation is displayed
-- Content remains fully readable
-- All links work correctly
-
-### Theme Switching
-
-- Defaults to system preference (light/dark)
-- User can toggle manually via the 🌙/☀️ button
-- Choice is persisted in `localStorage`
-
-### 404 Page
-
-GitHub Pages automatically serves `404.html` for unknown routes. The 404 page:
-- Has inline styles (works without loading CSS)
-- Stores the attempted path for potential client-side routing
-- Works correctly on page refresh
-
-## Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-
-The template uses widely-supported features and includes fallbacks for older browsers.
-
-## Optional: GitHub Actions Deployment
-
-The template includes an optional GitHub Actions workflow (`.github/workflows/deploy.yml`). This is **not required** for GitHub Pages to work, but provides:
-
-- Automated deployment on push
-- Build validation
-- Custom domain handling
-
-To enable:
-1. Go to repository **Settings** → **Pages**
-2. Change Source to **GitHub Actions**
-3. Push to trigger the workflow
-
-## Troubleshooting
-
-### Links are broken
-
-Make sure you're using relative paths in the HTML files. The component loader handles path resolution automatically.
-
-### Components not loading
-
-- Ensure you're running a local server (not opening files directly)
-- Check the browser console for errors
-- Verify file paths are correct
-
-### Theme not persisting
-
-Check if `localStorage` is available in your browser. Some privacy settings may block it.
-
-### 404 page not showing
-
-On GitHub Pages, 404.html is automatically served. For local testing, you need to configure your server to handle 404s.
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-Made with ❤️ for the GitHub Pages community
+## Customization
+
+### Site Information
+
+Edit `_config.yml`:
+
+```yaml
+title: "Your Name"
+description: "Your tagline or description"
+author:
+  name: "Your Name"
+  email: "you@example.com"
+
+url: "https://username.github.io"
+baseurl: ""
+```
+
+### Navigation
+
+Pages with `nav_order` front matter appear in navigation, sorted by order:
+
+```yaml
+---
+title: About
+nav_order: 2
+nav_title: About Me  # Optional: different nav text
+permalink: /about/
+---
+```
+
+### Projects
+
+Edit `_data/projects.yml`:
+
+```yaml
+- title: My Project
+  description: What it does
+  image: /assets/img/project.png
+  tags:
+    - JavaScript
+    - React
+  demo_url: https://demo.example.com
+  repo_url: https://github.com/user/repo
+  featured: true
+```
+
+### Social Links
+
+Edit `_data/social.yml`:
+
+```yaml
+- name: GitHub
+  url: https://github.com/username
+  icon: "📦"
+
+- name: Email
+  url: mailto:you@example.com
+  icon: "✉️"
+```
+
+### Theme Colors
+
+Edit `assets/css/style.css` CSS variables:
+
+```css
+:root {
+  --color-primary: #4361ee;
+  --color-bg: #ffffff;
+  /* ... */
+}
+```
+
+### Adding Blog Posts
+
+Create files in `_posts/` with format `YYYY-MM-DD-title.md`:
+
+```yaml
+---
+layout: post
+title: "My Post Title"
+date: 2024-01-15 10:00:00 -0500
+categories: [category]
+tags: [tag1, tag2]
+author: Your Name
+---
+
+Post content in Markdown...
+```
+
+---
+
+## SEO Configuration
+
+### Setting site.url
+
+The `url` in `_config.yml` must be your actual site URL for SEO tags to work:
+
+```yaml
+# Correct
+url: "https://username.github.io"
+
+# Wrong
+url: ""
+url: "http://localhost:4000"
+```
+
+### Custom Domain
+
+If using a custom domain:
+
+1. Add `CNAME` file with your domain
+2. Update `_config.yml`:
+   ```yaml
+   url: "https://yourdomain.com"
+   baseurl: ""
+   ```
+
+---
+
+## How Links Work
+
+All internal links use Jekyll's `relative_url` filter:
+
+```liquid
+<a href="{{ '/about/' | relative_url }}">About</a>
+<link href="{{ '/assets/css/style.css' | relative_url }}">
+<img src="{{ '/assets/img/photo.jpg' | relative_url }}">
+```
+
+This prepends `baseurl` automatically, so links work for both user and project sites.
+
+---
+
+## GitHub Pages Constraints
+
+This template follows GitHub Pages constraints:
+
+- ✅ Uses only GitHub Pages safe Jekyll features
+- ✅ No unsupported plugins
+- ✅ No custom build process required
+- ✅ Standard Kramdown markdown
+- ✅ Static assets only
+
+---
+
+## Troubleshooting
+
+### Site not building
+
+- Check **Actions** tab for build errors
+- Ensure `_config.yml` is valid YAML
+- Check for Liquid syntax errors
+
+### Links broken on project site
+
+- Ensure `baseurl: "/repo-name"` matches exactly
+- Use `| relative_url` for all internal links
+
+### CSS not loading
+
+- Check path uses `| relative_url`
+- Clear browser cache
+
+### 404 page not showing
+
+GitHub Pages automatically serves `404.html` for missing pages.
+
+---
+
+## License
+
+MIT License - see [LICENSE](LICENSE)

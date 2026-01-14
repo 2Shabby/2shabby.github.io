@@ -1,0 +1,67 @@
+# Projects data file
+# This is the source of truth for the projects page
+# Edit this file to add, remove, or modify projects
+
+- title: Full-Stack Web App
+  description: A full-stack web application with real-time features, user authentication, and modern architecture.
+  image: /assets/img/project-placeholder.svg
+  tags:
+    - React
+    - Node.js
+    - WebSocket
+    - MongoDB
+  demo_url: https://example.com/demo1
+  repo_url: https://github.com/yourusername/project1
+  featured: true
+
+- title: CLI Automation Tool
+  description: A command-line tool for automating development workflows and improving productivity.
+  image: /assets/img/project-placeholder.svg
+  tags:
+    - Python
+    - CLI
+    - Automation
+  repo_url: https://github.com/yourusername/project2
+  featured: true
+
+- title: Progressive Web App
+  description: A mobile-first progressive web app with offline support and push notifications.
+  image: /assets/img/project-placeholder.svg
+  tags:
+    - PWA
+    - JavaScript
+    - Service Worker
+  demo_url: https://example.com/demo3
+  repo_url: https://github.com/yourusername/project3
+  featured: true
+
+- title: Open Source Library
+  description: A lightweight utility library for common JavaScript operations with zero dependencies.
+  image: /assets/img/project-placeholder.svg
+  tags:
+    - TypeScript
+    - npm
+    - Open Source
+  demo_url: https://example.com/docs
+  repo_url: https://github.com/yourusername/project4
+  featured: false
+
+- title: API Integration Platform
+  description: A platform for managing and monitoring third-party API integrations with analytics.
+  image: /assets/img/project-placeholder.svg
+  tags:
+    - Python
+    - FastAPI
+    - PostgreSQL
+  demo_url: https://example.com/demo5
+  featured: false
+
+- title: Jekyll Portfolio Template
+  description: This very template! A clean, fast, and accessible Jekyll site for GitHub Pages.
+  image: /assets/img/project-placeholder.svg
+  tags:
+    - Jekyll
+    - GitHub Pages
+    - Liquid
+  repo_url: https://github.com/yourusername/portfolio-template
+  featured: true
