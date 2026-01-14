@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Projects
-description: Things I've tended to over time.
+description: Things I've worked on.
 permalink: /projects/
 ---
 
@@ -27,6 +27,6 @@ permalink: /projects/
 
 ---
 
-## Open to conversations
+## Get in touch
 
-If something here resonates or sparks a thought, I'd be glad to hear from you. [Say hello]({{ '/about/' | relative_url }}).
+Feel free to reach out. [Contact]({{ '/about/' | relative_url }}).

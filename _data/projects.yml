@@ -62,7 +62,7 @@ categories:
       - slug: compiler
         name: "C Compiler"
         tagline: "Full compiler implementation with lexer, parser, and x86 code generation"
-        status: maintained
+        status: past
         tags:
           - Systems
           - Compiler
@@ -75,7 +75,7 @@ categories:
       - slug: linux-shell
         name: "Linux Shell"
         tagline: "Bash-like shell implementation with piping, redirection, and system calls"
-        status: maintained
+        status: past
         tags:
           - Systems
           - C
@@ -88,7 +88,7 @@ categories:
       - slug: xv6
         name: "Xv6 Operating System"
         tagline: "Process scheduling algorithms in MIT's teaching OS"
-        status: maintained
+        status: past
         tags:
           - Systems
           - OS
@@ -142,7 +142,7 @@ categories:
       - slug: quantum-density-ml
         name: "Quantum State Generation via ML"
         tagline: "Physics-constrained GANs/VAEs for valid quantum density matrices"
-        status: maintained
+        status: past
         tags:
           - ML
           - Quantum
@@ -157,7 +157,7 @@ categories:
       - slug: quantum-witness-ml
         name: "Quantum Distillability Witness Learner"
         tagline: "ML pipeline for 3-qubit distillability certification using SVM and Transformers"
-        status: maintained
+        status: past
         tags:
           - ML
           - Quantum
@@ -172,7 +172,7 @@ categories:
       - slug: image-style-transfer
         name: "Image Style Transfer"
         tagline: "Neural style transfer using deep learning"
-        status: maintained
+        status: past
         tags:
           - ML
           - Deep Learning
@@ -184,7 +184,7 @@ categories:
       - slug: quantum-entanglement
         name: "Fully Entangled Fraction"
         tagline: "Quantum entanglement analysis using Mathematica"
-        status: maintained
+        status: past
         tags:
           - Quantum
           - Research
@@ -200,7 +200,7 @@ categories:
       - slug: healthcare-blockchain
         name: "Blockchain Electronic Health Records"
         tagline: "Ethereum smart contract with role-based access and IPFS storage"
-        status: maintained
+        status: past
         tags:
           - Blockchain
           - Web3
@@ -214,7 +214,7 @@ categories:
       - slug: virtual-labs
         name: "Virtual Labs"
         tagline: "Contributions to Government of India's virtual labs initiative"
-        status: maintained
+        status: past
         tags:
           - Web
           - Open Source
@@ -231,7 +231,7 @@ categories:
       - slug: document-matching
         name: "Document Matching with NLP"
         tagline: "LDA-based document scoring and keyword extraction"
-        status: maintained
+        status: past
         tags:
           - ML
           - NLP
