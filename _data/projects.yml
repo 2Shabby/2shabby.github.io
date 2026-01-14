@@ -21,7 +21,6 @@ categories:
           - Go
           - gRPC
           - PostgreSQL
-        repo_url: "https://github.com/2Shabby/jeeves"
         summary: "Polyglot agentic runtime with Go orchestration engine, Python LLM layer, gRPC IPC, and 6-provider abstraction (OpenAI, Anthropic, Azure, LlamaServer, LlamaCpp). Microkernel with 4-layer memory architecture, 7-type interrupt/resume system, PostgreSQL checkpoint persistence, and Protocol classes for dependency injection. Tested across 5 architectural layers (L0-L4) with documented contracts and import boundaries."
 
       - slug: jeeves-code-analysis
@@ -37,7 +36,6 @@ categories:
           - PostgreSQL
           - pgvector
           - DevOps
-        repo_url: "https://github.com/2Shabby/jeeves"
         summary: "7-agent LLM pipeline with anti-hallucination Critic agent, citation validation, and bounded reintent cycles for read-only codebase exploration. Analysis tools with deterministic fallback strategies (symbol→grep→semantic) across 10 programming languages using configuration-driven agents. PostgreSQL/pgvector semantic search, gRPC streaming to WebSocket UI, and GPU-accelerated local LLM inference via Docker."
 
       - slug: jeeves-assistant
@@ -51,7 +49,6 @@ categories:
           - PostgreSQL
           - pgvector
           - Python
-        repo_url: "https://github.com/2Shabby/jeeves"
         summary: "Modular capability layer with async Python tools for Kanban task management, semantic-search journaling, and reminder tracking with staleness scoring. PostgreSQL/pgvector backend with optimistic locking for concurrent edits and soft-delete pattern preserving audit history. Event-driven architecture with capability registration protocol enabling schema, prompts, and tools as self-contained plugin."
 
   # Systems Programming
@@ -69,7 +66,6 @@ categories:
           - C
           - x86
           - Low-level
-        repo_url: "https://github.com/2Shabby/Compiler"
         summary: "Compiler for a subset of C with lexer, parser, semantic analysis, and code generation targeting x86. Covers core compiler phases: lexical analysis, syntax parsing, semantic validation, intermediate representation, and machine code generation."
 
       - slug: linux-shell
@@ -82,7 +78,6 @@ categories:
           - Linux
           - OS
           - Low-level
-        repo_url: "https://github.com/2Shabby/LinuxShell"
         summary: "Bash-like shell for Linux in C using system calls. Supports basic commands, piping, redirection, and custom commands. Process management, signal handling, and I/O redirection via low-level POSIX APIs."
 
       - slug: xv6
@@ -95,7 +90,6 @@ categories:
           - Scheduling
           - C
           - Low-level
-        repo_url: "https://github.com/2Shabby/XV6"
         summary: "Process scheduling algorithms in Xv6 (MIT's teaching OS). Various scheduling policies including priority-based, round-robin, and custom algorithms."
 
   # IoT & Embedded Systems
@@ -116,7 +110,6 @@ categories:
           - ARM
           - Kubernetes
           - ONNX
-        repo_url: "https://github.com/2Shabby/voice-gateway"
         summary: "Real-time voice pipeline with lock-free SPSC ring buffers and multi-threaded ALSA I/O for 48kHz audio on ARM edge devices (Radxa Rock 5). ML stack: Silero VAD, DTW-based wake word detection, faster-whisper STT, Kokoro ONNX TTS, with optional RK3588 NPU acceleration. Deployed via Kubernetes with file-based health probes."
 
       - slug: campus-energy
@@ -131,7 +124,6 @@ categories:
           - Modbus
           - FreeRTOS
           - Hardware
-        repo_url: "https://github.com/2Shabby/campus-energy-monitoring"
         summary: "ESP32-based IoT system interfacing with industrial power meters via Modbus RTU, using FreeRTOS task queues for non-blocking serial I/O and CRC16 validation. Django-Celery dashboard aggregating sensor streams via OneM2M REST API, with visualizations including temperature-energy correlation scatter plots. SI7021 temperature/humidity sensors with hourly data ingestion."
 
   # Machine Learning & Quantum Computing
@@ -151,7 +143,6 @@ categories:
           - GAN
           - VAE
           - PyTorch
-        repo_url: "https://github.com/2Shabby/Quantum-State-Generation"
         summary: "Physics-constrained GAN/VAE architectures generating valid 4×4 quantum density matrices using LDL and Cholesky decomposition for structural PSD guarantee. Physics-informed loss function covering PSD, trace, c-bounds, and diversity constraints. Batch-optimized quantum operations using vectorized PyTorch Kronecker products for Bloch vector extraction."
 
       - slug: quantum-witness-ml
@@ -166,7 +157,6 @@ categories:
           - Transformer
           - SVM
           - PyTorch
-        repo_url: "https://github.com/2Shabby/Quantum-Witness-Learner"
         summary: "ML pipeline certifying 3-qubit distillability using SVM and Transformer classifiers on GHZ, W, cluster, and Werner states. Restricted Pauli features match full tomography while reducing measurement settings, with interpretable witness operators. NPT/PPT/DPS Level 2 oracle hierarchy with partial transpose across all bipartitions and CVXPY SDP-based symmetric extension testing."
 
       - slug: image-style-transfer
@@ -178,7 +168,6 @@ categories:
           - Deep Learning
           - Computer Vision
           - Python
-        repo_url: "https://github.com/2Shabby/Image-style-transfer"
         summary: "Extraction of the style and colors of one image to another using deep learning techniques. Implements neural style transfer algorithms to blend content and style representations from different images."
 
       - slug: quantum-entanglement
@@ -189,7 +178,6 @@ categories:
           - Quantum
           - Research
           - Mathematica
-        repo_url: "https://github.com/2Shabby/Fully-entangled-fraction"
         summary: "Using Mathematica to calculate the Fully Entangled Fraction of various entangled networks. Analyzes quantum entanglement properties and measures the degree of entanglement in multi-qubit systems."
 
   # Web & Blockchain
@@ -208,7 +196,6 @@ categories:
           - React
           - IPFS
           - Healthcare
-        repo_url: "https://github.com/2Shabby/Blockchain-based-EHR"
         summary: "Ethereum smart contract with role-based access control and dual-signature update protocol requiring both doctor and patient consent for record modifications. React/Web3.js frontend with MetaMask integration for record creation, viewing, sharing, updating, and role assignment. Hybrid storage using IPFS for medical files and on-chain hash storage for integrity verification."
 
       - slug: virtual-labs
@@ -220,7 +207,6 @@ categories:
           - Open Source
           - Government
           - Education
-        repo_url: "https://github.com/virtual-labs"
         summary: "Fixed bugs in Virtual Labs, a Government of India initiative, and added new functionality and features. Contributed to improving the platform's educational tools and interactive lab simulations for students."
 
   # NLP & Data Science
@@ -238,5 +224,4 @@ categories:
           - Research
           - Python
           - LDA
-        repo_url: "https://github.com/2Shabby/Document-matching-using-NLP"
         summary: "Given sets of papers and contexts, assigning scores of (0,1) to combinations. Extract keywords, and apply LDA (Latent Dirichlet Allocation) on data to assign relevance scores. Implements topic modeling techniques to match research papers with related abstracts or contexts."
