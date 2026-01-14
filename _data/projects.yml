@@ -1,67 +1,102 @@
-# Projects data file
+# Projects Data File
 # This is the source of truth for the projects page
-# Edit this file to add, remove, or modify projects
+# Edit this file to add, remove, or modify projects and categories
 
-- title: Full-Stack Web App
-  description: A full-stack web application with real-time features, user authentication, and modern architecture.
-  image: /assets/img/project-placeholder.svg
-  tags:
-    - React
-    - Node.js
-    - WebSocket
-    - MongoDB
-  demo_url: https://example.com/demo1
-  repo_url: https://github.com/yourusername/project1
-  featured: true
+categories:
+  # Systems & Infrastructure Projects
+  - key: systems
+    label: "Systems & Infrastructure"
+    description: "Large-scale systems, orchestration, and infrastructure projects"
+    items:
+      - slug: full-stack-web-app
+        name: "Full-Stack Web App"
+        tagline: "Real-time web application with modern architecture"
+        status: active
+        tags:
+          - React
+          - Node.js
+          - WebSocket
+          - MongoDB
+        repo_url: "https://github.com/yourusername/project1"
+        homepage_url: "https://example.com/demo1"
+        summary: "A full-stack web application with real-time features, user authentication, and modern architecture. Built with React for the frontend and Node.js for the backend, featuring WebSocket communication for live updates."
+        subrepos:
+          - name: "Frontend Client"
+            repo_url: "https://github.com/yourusername/project1-frontend"
+            note: "React-based SPA"
+          - name: "Backend API"
+            repo_url: "https://github.com/yourusername/project1-backend"
+            note: "Node.js REST API with WebSocket support"
 
-- title: CLI Automation Tool
-  description: A command-line tool for automating development workflows and improving productivity.
-  image: /assets/img/project-placeholder.svg
-  tags:
-    - Python
-    - CLI
-    - Automation
-  repo_url: https://github.com/yourusername/project2
-  featured: true
+      - slug: api-integration-platform
+        name: "API Integration Platform"
+        tagline: "Manage and monitor third-party API integrations"
+        status: maintained
+        tags:
+          - Python
+          - FastAPI
+          - PostgreSQL
+        repo_url: "https://github.com/yourusername/project5"
+        homepage_url: "https://example.com/demo5"
+        summary: "A platform for managing and monitoring third-party API integrations with comprehensive analytics and logging capabilities."
 
-- title: Progressive Web App
-  description: A mobile-first progressive web app with offline support and push notifications.
-  image: /assets/img/project-placeholder.svg
-  tags:
-    - PWA
-    - JavaScript
-    - Service Worker
-  demo_url: https://example.com/demo3
-  repo_url: https://github.com/yourusername/project3
-  featured: true
+  # Tools & Automation
+  - key: tools
+    label: "Tools & Automation"
+    description: "CLI tools, scripts, and automation utilities"
+    items:
+      - slug: cli-automation-tool
+        name: "CLI Automation Tool"
+        tagline: "Automate development workflows and boost productivity"
+        status: active
+        tags:
+          - Python
+          - CLI
+          - Automation
+        repo_url: "https://github.com/yourusername/project2"
+        summary: "A command-line tool for automating repetitive development workflows and improving team productivity. Features include project scaffolding, code generation, and deployment automation."
 
-- title: Open Source Library
-  description: A lightweight utility library for common JavaScript operations with zero dependencies.
-  image: /assets/img/project-placeholder.svg
-  tags:
-    - TypeScript
-    - npm
-    - Open Source
-  demo_url: https://example.com/docs
-  repo_url: https://github.com/yourusername/project4
-  featured: false
+  # Web & Mobile Applications
+  - key: webmobile
+    label: "Web & Mobile Apps"
+    description: "Progressive web apps and mobile-first applications"
+    items:
+      - slug: progressive-web-app
+        name: "Progressive Web App"
+        tagline: "Mobile-first PWA with offline support"
+        status: active
+        tags:
+          - PWA
+          - JavaScript
+          - Service Worker
+        repo_url: "https://github.com/yourusername/project3"
+        homepage_url: "https://example.com/demo3"
+        summary: "A mobile-first progressive web app with offline support and push notifications. Provides a native app-like experience on mobile devices while remaining accessible through the browser."
 
-- title: API Integration Platform
-  description: A platform for managing and monitoring third-party API integrations with analytics.
-  image: /assets/img/project-placeholder.svg
-  tags:
-    - Python
-    - FastAPI
-    - PostgreSQL
-  demo_url: https://example.com/demo5
-  featured: false
+  # Libraries & Open Source
+  - key: opensource
+    label: "Libraries & Open Source"
+    description: "Open source libraries and community contributions"
+    items:
+      - slug: open-source-library
+        name: "Open Source Library"
+        tagline: "Lightweight utility library with zero dependencies"
+        status: maintained
+        tags:
+          - TypeScript
+          - npm
+          - Open Source
+        repo_url: "https://github.com/yourusername/project4"
+        homepage_url: "https://example.com/docs"
+        summary: "A lightweight utility library for common JavaScript operations with zero dependencies. Fully typed with TypeScript and well-documented for easy integration."
 
-- title: Jekyll Portfolio Template
-  description: This very template! A clean, fast, and accessible Jekyll site for GitHub Pages.
-  image: /assets/img/project-placeholder.svg
-  tags:
-    - Jekyll
-    - GitHub Pages
-    - Liquid
-  repo_url: https://github.com/yourusername/portfolio-template
-  featured: true
+      - slug: jekyll-portfolio-template
+        name: "Jekyll Portfolio Template"
+        tagline: "Clean, accessible Jekyll site for GitHub Pages"
+        status: active
+        tags:
+          - Jekyll
+          - GitHub Pages
+          - Liquid
+        repo_url: "https://github.com/yourusername/portfolio-template"
+        summary: "This very template! A clean, fast, and accessible Jekyll site optimized for GitHub Pages. Features semantic HTML, CSS-only dark mode, and data-driven content."

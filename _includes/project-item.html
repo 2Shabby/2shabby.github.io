@@ -1,0 +1,59 @@
+{% comment %}
+  Renders a single project item with its details and subrepos
+  Usage: {% include project-item.html project=project %}
+{% endcomment %}
+
+<article class="project-item">
+  <header class="project-header">
+    <h3 class="project-name">{{ include.project.name }}</h3>
+    {% if include.project.tagline %}
+    <p class="project-tagline">{{ include.project.tagline }}</p>
+    {% endif %}
+    {% if include.project.status %}
+    <span class="project-status status-{{ include.project.status }}">{{ include.project.status }}</span>
+    {% endif %}
+  </header>
+
+  <div class="project-body">
+    {% if include.project.tags %}
+    <div class="project-tags">
+      {% for tag in include.project.tags %}
+      {% include tag.html tag=tag %}
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    {% if include.project.summary %}
+    <p class="project-summary">{{ include.project.summary }}</p>
+    {% endif %}
+
+    <div class="project-links">
+      {% if include.project.repo_url %}
+      <a href="{{ include.project.repo_url }}" class="btn btn-sm btn-primary" target="_blank" rel="noopener noreferrer">
+        View Repository
+      </a>
+      {% endif %}
+      {% if include.project.homepage_url %}
+      <a href="{{ include.project.homepage_url }}" class="btn btn-sm btn-secondary" target="_blank" rel="noopener noreferrer">
+        Live Demo
+      </a>
+      {% endif %}
+    </div>
+
+    {% if include.project.subrepos %}
+    <div class="project-subrepos">
+      <h4 class="subrepos-title">Related Repositories:</h4>
+      <ul class="subrepos-list">
+        {% for subrepo in include.project.subrepos %}
+        <li>
+          <a href="{{ subrepo.repo_url }}" target="_blank" rel="noopener noreferrer">{{ subrepo.name }}</a>
+          {% if subrepo.note %}
+          <span class="subrepo-note">{{ subrepo.note }}</span>
+          {% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+  </div>
+</article>

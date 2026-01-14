@@ -1,0 +1,34 @@
+# Profile Information
+# This file contains your personal information and social links
+# Edit this file to update your profile across the site
+
+# Personal Information
+name: "Your Name"
+handle: "2Shabby"
+tagline: "Developer, Builder, Creator"
+short_bio: "I'm a passionate developer who loves building things for the web. With a focus on clean code, great user experiences, and accessible design, I strive to create software that makes a difference."
+
+# Social Links
+# Set to false or remove the line to hide a social link
+social:
+  github:
+    username: "yourusername"
+    url: "https://github.com/yourusername"
+
+  linkedin:
+    username: "yourusername"
+    url: "https://linkedin.com/in/yourusername"
+
+  twitter:
+    username: "yourusername"
+    url: "https://twitter.com/yourusername"
+
+  email:
+    address: "your.email@example.com"
+    url: "mailto:your.email@example.com"
+
+# Optional Additional Links
+# Add any other social/professional links here
+# website: "https://yoursite.com"
+# blog: "https://blog.yoursite.com"
+# mastodon: "https://mastodon.social/@yourusername"
