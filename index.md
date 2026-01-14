@@ -18,9 +18,6 @@ description: Systems & ML engineer building distributed systems, LLM infrastruct
     {% include tag.html tag=tag %}
     {% endfor %}
   </div>
-  {% if project.repo_url %}
-  <a href="{{ project.repo_url }}" target="_blank" rel="noopener noreferrer">View on GitHub &rarr;</a>
-  {% endif %}
 </div>
     {% assign featured_count = featured_count | plus: 1 %}
     {% endif %}
