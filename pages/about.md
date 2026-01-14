@@ -8,7 +8,7 @@ narrow: true
 
 ## Hi, I'm Mohammad
 
-I work on distributed systems, language model infrastructure, and some quantum computing. Interested in how things connect across layers—from low-level code to emergent behavior.
+I work on distributed systems, LLM infrastructure, and quantum computing.
 
 **Interests:** distributed systems • LLM infrastructure • systems programming • edge computing • quantum ML
 
