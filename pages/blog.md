@@ -27,5 +27,10 @@ nav_order: 4
   {% endfor %}
 </div>
 {% else %}
-<p class="text-muted">No posts yet. Check back soon!</p>
+<div style="text-align: center; padding: 3rem 0;">
+  <p style="font-size: 1.25rem; color: var(--color-text-muted); margin-bottom: 1.5rem;">
+    No blog posts yet. In the meantime, check out my projects.
+  </p>
+  <a href="{{ '/projects/' | relative_url }}" class="btn btn-primary">View Projects</a>
+</div>
 {% endif %}

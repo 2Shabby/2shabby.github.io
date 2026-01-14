@@ -1,45 +1,54 @@
 ---
 layout: page
 title: About
-description: Learn more about me and my background.
+description: Systems & ML engineer specializing in distributed systems and LLM infrastructure.
 permalink: /about/
 nav_order: 2
 narrow: true
 ---
 
-## Hello!
+## Hi, I'm Mohammad
 
-I'm a passionate developer who loves building things for the web. With a focus on clean code, great user experiences, and accessible design, I strive to create software that makes a difference.
+I'm a systems and machine learning engineer with deep expertise in building distributed systems, LLM infrastructure, and agentic AI architectures. I specialize in the intersection of low-level systems programming and modern AI technologies.
 
-When I'm not coding, you can find me exploring new technologies, contributing to open source projects, or enjoying the outdoors.
+My work spans from building polyglot agentic runtimes with microkernel architectures to implementing physics-constrained machine learning models for quantum computing research. I'm passionate about creating robust, scalable systems that push the boundaries of what's possible.
 
-### Skills
+### Core Expertise
 
-<ul class="skills-list">
-  <li>JavaScript / TypeScript</li>
-  <li>React / Vue.js</li>
-  <li>Node.js</li>
-  <li>Python</li>
-  <li>HTML / CSS / Sass</li>
-  <li>Git / GitHub</li>
-  <li>SQL / NoSQL</li>
-  <li>Docker</li>
-</ul>
+**Systems & Infrastructure**
+- Distributed systems architecture and microkernel design
+- Low-level systems programming (C, Go, Python)
+- gRPC/IPC communication and PostgreSQL optimization
+- Operating systems (compiler design, shell implementation, kernel scheduling)
 
-### Experience
+**AI & Machine Learning**
+- LLM infrastructure and multi-provider abstractions (OpenAI, Anthropic, Azure)
+- Agentic architectures with multi-agent pipelines
+- Quantum machine learning and physics-informed neural networks
+- Computer vision and NLP applications
 
-I have experience working on a variety of projects, from small personal tools to large-scale web applications. I believe in writing maintainable, well-documented code and following best practices.
+**IoT & Embedded**
+- Edge computing on ARM devices (Radxa Rock 5, ESP32)
+- Real-time audio processing and voice assistants
+- Industrial IoT with Modbus RTU and FreeRTOS
+- Kubernetes deployment for edge systems
+
+**Web & Blockchain**
+- Smart contract development (Solidity, Ethereum)
+- Full-stack development (React, Django, FastAPI)
+- Decentralized storage (IPFS) and Web3 integration
+
+### Background
+
+I've built production systems handling everything from real-time voice processing on edge devices to multi-agent LLM pipelines with anti-hallucination mechanisms. My projects range from 82K+ LOC polyglot runtimes to research-grade quantum ML implementations with comprehensive test coverage.
+
+I believe in writing maintainable, well-tested code with clear architectural boundaries. Whether it's a microkernel with 5-layer architecture or a quantum state generator with physics-constrained loss functions, I focus on building systems that are both theoretically sound and practically robust.
 
 ### This Site
 
-This website is built with [Jekyll](https://jekyllrb.com/) and hosted on [GitHub Pages](https://pages.github.com/). It uses:
+This portfolio is built with Jekyll and hosted on GitHub Pages. It features a data-driven architecture with zero JavaScript for core functionality, pure CSS dark mode, and semantic HTML throughout. The projects page uses `<details>`/`<summary>` elements for NO-JS category expansion.
 
-- **Semantic HTML5** for accessibility
-- **CSS Variables** for theming
-- **Zero plugins** for maximum compatibility
-- **Data-driven content** via YAML files
-
-The source code is available on [GitHub](https://github.com/yourusername/yourusername.github.io).
+Source available at [github.com/2Shabby/2shabby.github.io](https://github.com/2Shabby/2shabby.github.io).
 
 ---
 
