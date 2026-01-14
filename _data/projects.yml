@@ -12,6 +12,7 @@ categories:
         name: "Jeeves Agentic Runtime"
         tagline: "Polyglot agentic runtime with Go orchestration and Python LLM layer"
         status: active
+        repo_url: "https://github.com/Jeeves-Cluster-Organization/jeeves-core"
         tags:
           - Systems
           - Distributed
@@ -27,6 +28,7 @@ categories:
         name: "Jeeves Code Analysis Pipeline"
         tagline: "Multi-agent LLM pipeline for codebase exploration with anti-hallucination"
         status: active
+        repo_url: "https://github.com/Jeeves-Cluster-Organization/jeeves-capability-code-analysis"
         tags:
           - LLM
           - Agentic
@@ -116,6 +118,7 @@ categories:
         name: "Campus Energy Monitoring"
         tagline: "ESP32-based IoT system with Modbus RTU and Django dashboard"
         status: active
+        repo_url: "https://github.com/2Shabby/ESW"
         tags:
           - IoT
           - Embedded
@@ -135,6 +138,7 @@ categories:
         name: "Quantum State Generation via ML"
         tagline: "Physics-constrained GANs/VAEs for valid quantum density matrices"
         status: past
+        repo_url: "https://github.com/2Shabby/broadcastability_ml_project"
         tags:
           - ML
           - Quantum
@@ -189,6 +193,7 @@ categories:
         name: "Blockchain Electronic Health Records"
         tagline: "Ethereum smart contract with role-based access and IPFS storage"
         status: past
+        repo_url: "https://github.com/2Shabby/medical-records"
         tags:
           - Blockchain
           - Web3
