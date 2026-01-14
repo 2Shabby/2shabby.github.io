@@ -49,10 +49,3 @@ I believe in writing maintainable, well-tested code with clear architectural bou
 This portfolio is built with Jekyll and hosted on GitHub Pages. It features a data-driven architecture with zero JavaScript for core functionality, pure CSS dark mode, and semantic HTML throughout. The projects page uses `<details>`/`<summary>` elements for NO-JS category expansion.
 
 Source available at [github.com/2Shabby/2shabby.github.io](https://github.com/2Shabby/2shabby.github.io).
-
----
-
-<div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem;">
-  <a href="{{ '/projects/' | relative_url }}" class="btn btn-primary">View My Projects</a>
-  <a href="{{ '/contact/' | relative_url }}" class="btn btn-secondary">Get In Touch</a>
-</div>
