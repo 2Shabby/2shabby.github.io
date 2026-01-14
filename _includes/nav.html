@@ -11,20 +11,13 @@
       </a>
     </li>
     <li>
+      <a href="{{ '/writing/' | relative_url }}"{% if page.url contains '/writing' or page.url contains '/posts' or page.layout == 'post' %} class="active" aria-current="page"{% endif %}>
+        Write-ups
+      </a>
+    </li>
+    <li>
       <a href="{{ '/about/' | relative_url }}"{% if page.url contains '/about' %} class="active" aria-current="page"{% endif %}>
         About
-      </a>
-    </li>
-    {% if site.posts.size > 0 %}
-    <li>
-      <a href="{{ '/blog/' | relative_url }}"{% if page.url contains '/blog' or page.layout == 'post' %} class="active" aria-current="page"{% endif %}>
-        Blog
-      </a>
-    </li>
-    {% endif %}
-    <li>
-      <a href="{{ '/contact/' | relative_url }}"{% if page.url contains '/contact' %} class="active" aria-current="page"{% endif %}>
-        Contact
       </a>
     </li>
   </ul>

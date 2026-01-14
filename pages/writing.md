@@ -1,9 +1,8 @@
 ---
 layout: page
-title: Blog
-description: Thoughts, tutorials, and updates.
-permalink: /blog/
-nav_order: 4
+title: Write-ups
+description: Technical writing, notes, and thoughts on systems and AI.
+permalink: /writing/
 ---
 
 {% if site.posts.size > 0 %}
@@ -14,18 +13,19 @@ nav_order: 4
       <h2><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
       <div class="post-meta">
         <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
-        {% if post.author %}
-        <span>by {{ post.author }}</span>
-        {% endif %}
       </div>
     </header>
     {% if post.excerpt %}
     <p>{{ post.excerpt | strip_html | truncate: 200 }}</p>
     {% endif %}
-    <a href="{{ post.url | relative_url }}" class="read-more">Read more &rarr;</a>
+    <a href="{{ post.url | relative_url }}">Read more &rarr;</a>
   </article>
   {% endfor %}
 </div>
 {% else %}
-<p class="text-muted">No posts yet. Check back soon!</p>
+<div style="text-align: center; padding: 3rem 0;">
+  <p style="font-size: 1.25rem; color: var(--color-text-muted);">
+    No posts yet. Coming soon.
+  </p>
+</div>
 {% endif %}
