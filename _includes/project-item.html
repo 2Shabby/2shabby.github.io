@@ -27,6 +27,7 @@
     <p class="project-summary">{{ include.project.summary }}</p>
     {% endif %}
 
+    {% comment %} Repo links disabled for now
     <div class="project-links">
       {% if include.project.repo_url %}
       <a href="{{ include.project.repo_url }}" class="btn btn-sm btn-primary" target="_blank" rel="noopener noreferrer">
@@ -55,5 +56,6 @@
       </ul>
     </div>
     {% endif %}
+    {% endcomment %}
   </div>
 </article>
