@@ -29,15 +29,13 @@ permalink: /projects/
 
 ## My Favourite Project & Learning
 
-<!-- TODO: Replace this section with your own authentic thoughts. This is your interview question answer, pre-written. -->
+The most significant project for me is **Jeeves Core**.
 
-**Favourite Project:**
+It started from wanting to write a reusable agent pipeline using open source libraries. But as I built, the difficulty in creating persistent memory, logging, database access, centralized configuration, modularity, and other good practices started becoming increasingly hard.
 
-> [YOUR INPUT NEEDED] Which project are you most proud of and why? What made it challenging? What would you do differently? Example: "My favourite project is X because..." — be specific about what you learned and what makes it stand out to you personally.
+Jeeves Core was born out of that difficulty. The aim is to provide a layer of abstraction above which various agentic flows can run—without having to rewrite and reimplement the reusables and primitives that shouldn't be tightly coupled to the agent code itself.
 
-**Key Learning:**
-
-> [YOUR INPUT NEEDED] What's the most valuable thing you've learned from any of your projects? This could be technical (e.g., "I finally understood why distributed systems are hard when...") or non-technical (e.g., "I learned that finishing a project is harder than starting one"). Be honest and specific.
+The [Code Analysis Pipeline](/projects/#jeeves-code-analysis) and [AI Personal Assistant](/projects/#jeeves-assistant) are attempts at reusing this abstraction across different agentic tasks. Each capability plugs into the same runtime, sharing the infrastructure while focusing only on its specific job.
 
 ---
 
