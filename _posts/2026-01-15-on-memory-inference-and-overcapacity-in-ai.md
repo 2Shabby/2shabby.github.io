@@ -53,7 +53,7 @@ The complexity of fine-tuning transformers and orchestrating agents—maybe a mi
 
 Examples of Meta's smaller models and their mobile models show that tool calling, fine-tuning, and distillation have greatly helped in bridging the gap. Current small language models that leverage large language models—either for data synthesis or task-specific distillation—are quite effective.[^10][^11]
 
-The assistance of LLMs to improve LLMs feels circular, like the compilers of some languages being improved once the new language works. This is called bootstrapping—GCC (the C compiler) is written in C, the Rust compiler was rewritten from OCaml into Rust, and Go's compiler moved from C to Go. Once you have a working version, you use it to build a better version of itself.
+The assistance of LLMs to improve LLMs feels circular, but it reminds me of how compilers evolve. GCC is written in C, the Rust compiler was rewritten from OCaml into Rust, Go's compiler moved from C to Go. Once you have a working version, you use it to build a better version of itself. The same pattern seems to be playing out with language models.
 
 ## Hybrid AI
 
