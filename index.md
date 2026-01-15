@@ -8,9 +8,11 @@ description: Systems & ML engineer building distributed systems, LLM infrastruct
 
 **Jeeves Core** has been one of the most interesting and learning-dense projects that I have worked on. It started off with just wanting to get local LLMs to be useful, and learn the pains of creating an E2E project on top of it.
 
-It grew into a reusable agent runtime—the difficulty in creating persistent memory, logging, database access, and modularity when using various agentic frameworks led me to build an abstraction layer that different agentic flows can run on top of.
+It then grew into a project focused on creating a reusable agent pipeline using open source libraries. However, as I worked on it and tested the various flows, the capability of SLMs surprised me, but the difficulty in creating persistent memory, logging, database access, centralized configuration, modularity, and other good practices started becoming increasingly hard when I was attempting to use various agentic frameworks.
 
-The [Code Analysis Pipeline]({{ '/projects/' | relative_url }}#jeeves-code-analysis) and [AI Personal Assistant]({{ '/projects/' | relative_url }}#jeeves-assistant) are capabilities built on this runtime, each plugging into the same infrastructure while focusing on its specific job.
+The aim of Jeeves Core was to try and address the gap, by providing a layer of abstraction above which various agentic flows can run, without having to rewrite and reimplement the reusables and primitives that shouldn't be tightly coupled to the agent code itself.
+
+The [Code Analysis Pipeline]({{ '/projects/' | relative_url }}#jeeves-code-analysis) and [AI Personal Assistant]({{ '/projects/' | relative_url }}#jeeves-assistant) are attempts at reusing this abstraction across different agentic tasks. Each capability plugs into the same runtime, sharing the infrastructure while focusing only on its specific job.
 
 ---
 
