@@ -1,6 +1,7 @@
 ---
 title: "On Memory, Inference, and Overcapacity in AI"
 date: 2026-01-15
+category: opinion
 tags:
   - AI
   - LLM
