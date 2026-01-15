@@ -15,7 +15,7 @@ However, my claim is that a large portion of what LLM inferences need by compani
 
 <!--more-->
 
-## What users actually need
+## Memory, reliability, and failing reliably
 
 It does not matter as much for me if the message that I send to ChatGPT takes 10–15 seconds more, as long as it doesn't fail, as long as I don't have to pay as much money, and as long as it doesn't hallucinate. Given these constraints, it does not feel like the primary requirements of users is that of extremely fast inference.
 
@@ -25,7 +25,9 @@ Additionally, I never had to go ahead and fine-tune all of these or train all of
 
 For example, the usage of various deep research modes, starting from DeepSeek, Gemini, and ChatGPT, and later Claude, are all examples of how I personally was always willing to give up more time in order to go through a larger number of sources just to get more verifiable data.
 
-## Local inference is more viable than expected
+These were bigger annoyances than just being confident in the unreliability of the LLM. I broadly know that I need to double check things, but the context of multiple chats being lost in GitHub Copilot in Visual Studio, and not being able to copy paste the same context reliably, were far bigger annoyances. After all, I still remember the shockwaves that earlier ChatGPT versions caused, and they were just as unreliable as small language models today when trying to use them day to day.
+
+## Can I run it locally?
 
 The performance, the raw inference performance of locally running LLMs on consumer gaming GPUs like the 3070, NVIDIA 3070 8GB left me pleasantly surprised, especially when using quantized models.[^3][^4]
 
@@ -35,7 +37,7 @@ These have an obvious downside of being slower in terms of inference speed. Howe
 
 It feels like memory and inference are two sides of the AI coin, and we have been increasing both of these to an extremely large extent.
 
-## Day-to-day use cases
+## Where would we need AI?
 
 Most of the important inference that is needed by a user in their day-to-day lives that I can imagine, such as for NLP to text transcribing and then to perform certain tasks on the basis of that transcribing, all seem possible with a small locally running LLM that is built on top of some home assistant or some other sort of a layer if I wanted to, for example, automate my house using NLP.[^8][^9]
 
@@ -50,6 +52,8 @@ The complexity of fine-tuning transformers and orchestrating agents—maybe a mi
 ## Small models are catching up
 
 Examples of Meta's smaller models and their mobile models show that tool calling, fine-tuning, and distillation have greatly helped in bridging the gap. Current small language models that leverage large language models—either for data synthesis or task-specific distillation—are quite effective.[^10][^11]
+
+The assistance of LLMs to improve LLMs feels circular, like the compilers of some languages being improved once the new language works. This is called bootstrapping—GCC (the C compiler) is written in C, the Rust compiler was rewritten from OCaml into Rust, and Go's compiler moved from C to Go. Once you have a working version, you use it to build a better version of itself.
 
 ## Hybrid AI
 
