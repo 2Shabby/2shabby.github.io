@@ -6,7 +6,7 @@ permalink: /about/
 narrow: true
 ---
 
-## Hi, I'm Mohammad
+## Hi, I'm Shahbaz
 
 I work on distributed systems, LLM infrastructure, and quantum computing.
 
