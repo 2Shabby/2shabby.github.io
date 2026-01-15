@@ -15,6 +15,8 @@ However, my claim is that a large portion of what LLM inferences need by compani
 
 <!--more-->
 
+## What users actually need
+
 It does not matter as much for me if the message that I send to ChatGPT takes 10–15 seconds more, as long as it doesn't fail, as long as I don't have to pay as much money, and as long as it doesn't hallucinate. Given these constraints, it does not feel like the primary requirements of users is that of extremely fast inference.
 
 Most users who are interacting with ChatGPT or with other large language models or the services that they're trying to provide will only be able to process so much information at a particular point of time. Given this, it felt to me that ChatGPT on Android unreliably crashing when running in temporary memory mode or GitHub Copilot sometimes not being able to run or continue with the chat were bigger breaks than a model which hallucinates frequently.
@@ -23,6 +25,8 @@ Additionally, I never had to go ahead and fine-tune all of these or train all of
 
 For example, the usage of various deep research modes, starting from DeepSeek, Gemini, and ChatGPT, and later Claude, are all examples of how I personally was always willing to give up more time in order to go through a larger number of sources just to get more verifiable data.
 
+## Local inference is more viable than expected
+
 The performance, the raw inference performance of locally running LLMs on consumer gaming GPUs like the 3070, NVIDIA 3070 8GB left me pleasantly surprised, especially when using quantized models.[^3][^4]
 
 Secondly, there has been an improvement and increase in the use of CPUs or NPUs for inference. CPUs and NPUs require the usage of RAM or some unified RAM for storing of models.[^5][^6]
@@ -30,6 +34,8 @@ Secondly, there has been an improvement and increase in the use of CPUs or NPUs 
 These have an obvious downside of being slower in terms of inference speed. However, the fact that Apple's silicon can run a 48GB model even with slower inference locally gives credence that Edge AI, even with slower inference, would truly be valuable.[^7]
 
 It feels like memory and inference are two sides of the AI coin, and we have been increasing both of these to an extremely large extent.
+
+## Day-to-day use cases
 
 Most of the important inference that is needed by a user in their day-to-day lives that I can imagine, such as for NLP to text transcribing and then to perform certain tasks on the basis of that transcribing, all seem possible with a small locally running LLM that is built on top of some home assistant or some other sort of a layer if I wanted to, for example, automate my house using NLP.[^8][^9]
 
@@ -41,11 +47,17 @@ Given this, it feels more feasible that users would be unwilling to pay for mode
 
 The complexity of fine-tuning transformers and orchestrating agents—maybe a mixture of experts or agents working in sequence as part of a workflow—may still require extremely large compute. But the end user who is using these trained flows will not always need the same.
 
+## Small models are catching up
+
 Examples of Meta's smaller models and their mobile models show that tool calling, fine-tuning, and distillation have greatly helped in bridging the gap. Current small language models that leverage large language models—either for data synthesis or task-specific distillation—are quite effective.[^10][^11]
+
+## Hybrid AI
 
 Hybrid AI is something that will just improve latency and performance if we consider every user having a lot of compute available on their edge devices, such as their phones or whatever device they're using to interact. The cost of transcribing it locally and then sending it to the cloud LLM and then receiving the outputs feels like a much better use.
 
 This is obviously being done, but there is scope for improvement in terms of what responsibilities each of these takes over and what responsibilities should not be transferred to the cloud for data sovereignty, privacy, and latency reasons.
+
+## Overcapacity
 
 By overcapacity, I mean that all of these GPU workloads, etc., may only be needed for coding use cases, may only be needed for various complex image recognition tasks where a smaller transformer will not work, and so on.
 
