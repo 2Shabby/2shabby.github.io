@@ -22,7 +22,7 @@ categories:
           - Go
           - gRPC
           - PostgreSQL
-        summary: "Go orchestration with Python LLM layer communicating via gRPC. Microkernel architecture with interrupt/resume system and PostgreSQL checkpoint persistence. Provider abstraction supporting OpenAI, Anthropic, Azure, and local inference. Layered design (L0-L4) with documented contracts and import boundaries."
+        summary: "A system that runs AI agents reliably. Agents can be paused and resumed without losing progress. Works with different AI providers like OpenAI and Anthropic. Built with clean separation between components so it's easy to maintain and extend."
 
       - slug: jeeves-code-analysis
         name: "Jeeves Code Analysis Pipeline"
@@ -38,7 +38,7 @@ categories:
           - PostgreSQL
           - pgvector
           - DevOps
-        summary: "Multi-agent pipeline where a Critic agent validates citations and triggers bounded reintent cycles on hallucination. Deterministic fallback strategies (symbol→grep→semantic) using tree-sitter for language-agnostic parsing. pgvector semantic search, gRPC streaming to WebSocket UI, and containerized local LLM inference."
+        summary: "Helps AI understand and explore codebases. Has a built-in fact-checker that catches when the AI makes things up about the code. Uses multiple search strategies—from exact text matching to meaning-based search—to find the right information."
 
       - slug: jeeves-assistant
         name: "AI Personal Assistant Capability"
@@ -51,7 +51,7 @@ categories:
           - PostgreSQL
           - pgvector
           - Python
-        summary: "Self-contained capability plugin providing task management, journaling, and reminders. Semantic search over journal entries via pgvector. Optimistic locking for concurrent edits and soft-delete preserving audit history. Capability registration protocol packages schema, prompts, and tools together."
+        summary: "A personal assistant plugin that handles tasks, journaling, and reminders. Can search through past journal entries by meaning, not just keywords. Safely handles multiple edits at once and keeps history of everything for auditing."
 
   # Systems Programming
   - key: systems-programming
@@ -68,7 +68,7 @@ categories:
           - C
           - x86
           - Low-level
-        summary: "Compiler for a subset of C covering lexical analysis, recursive descent parsing, type checking, and x86 code generation. Implements core phases from tokenization through semantic validation to executable output."
+        summary: "Takes C code and turns it into actual machine instructions that a computer can run. Covers the full journey: breaking code into tokens, understanding its structure, checking for type errors, and generating the final executable."
 
       - slug: linux-shell
         name: "Linux Shell"
@@ -80,7 +80,7 @@ categories:
           - Linux
           - OS
           - Low-level
-        summary: "Shell implementation in C with piping, I/O redirection, and job control. Uses fork/exec for process creation, dup2 for file descriptor manipulation, and signal handlers for job management."
+        summary: "A command-line shell like Bash, built from scratch in C. Supports piping commands together, redirecting input/output to files, and managing background jobs. Deep dive into how operating systems handle processes."
 
       - slug: xv6
         name: "Xv6 Operating System"
@@ -92,7 +92,7 @@ categories:
           - Scheduling
           - C
           - Low-level
-        summary: "Implemented process scheduling policies in xv6 kernel: priority-based scheduling with aging, round-robin with configurable quantum, and lottery scheduling with ticket-based fairness."
+        summary: "Modified a teaching operating system to experiment with how computers decide which programs run when. Implemented different scheduling approaches: priority-based (important tasks first), round-robin (everyone gets a turn), and lottery (random but fair)."
 
   # IoT & Embedded Systems
   - key: iot-embedded
@@ -113,7 +113,7 @@ categories:
           - ARM
           - Kubernetes
           - ONNX
-        summary: "Voice pipeline on Radxa Rock 5 using lock-free ring buffers for 48kHz ALSA I/O. Silero VAD, DTW wake word detection, faster-whisper STT, and Kokoro TTS with optional RK3588 NPU offload. Kubernetes deployment with health probes."
+        summary: "A voice assistant that runs entirely on a small ARM device—no cloud needed. Listens for a wake word, converts speech to text, and speaks back responses. Uses hardware acceleration to run AI models locally and efficiently."
 
       - slug: campus-energy
         name: "Campus Energy Monitoring"
@@ -128,7 +128,7 @@ categories:
           - Modbus
           - FreeRTOS
           - Hardware
-        summary: "ESP32 reading industrial power meters via Modbus RTU with FreeRTOS task queues for non-blocking I/O. Django-Celery backend aggregating sensor streams through OneM2M API. SI7021 temperature/humidity sensors with correlation visualizations."
+        summary: "Monitors energy usage across a campus in real-time. Small microcontrollers read power meters and environmental sensors, sending data to a web dashboard. Helps identify energy waste and track usage patterns over time."
 
   # Machine Learning & Quantum Computing
   - key: ml-quantum
@@ -148,7 +148,7 @@ categories:
           - GAN
           - VAE
           - PyTorch
-        summary: "GAN/VAE architectures outputting 4×4 density matrices via Cholesky decomposition, guaranteeing positive semidefiniteness by construction. Loss function enforces trace normalization and broadcastability bounds. Vectorized Kronecker products for batch Bloch vector extraction."
+        summary: "Uses machine learning to generate valid quantum states. The neural network is designed so that every output is mathematically correct by construction—not just approximately. Combines deep learning with quantum physics constraints."
 
       - slug: quantum-witness-ml
         name: "Quantum Distillability Witness Learner"
@@ -163,7 +163,7 @@ categories:
           - Transformer
           - SVM
           - PyTorch
-        summary: "SVM and Transformer classifiers certifying 3-qubit distillability on GHZ, W, cluster, and Werner states. Restricted Pauli features reduce required measurements while matching tomography accuracy. Oracle hierarchy using partial transpose and SDP-based symmetric extension (DPS Level 2)."
+        summary: "Trains classifiers to determine if quantum states have useful entanglement. The goal is to certify quantum properties using fewer measurements than traditional methods. Tested on various well-known quantum states used in research."
 
       - slug: image-style-transfer
         name: "Image Style Transfer"
@@ -174,7 +174,7 @@ categories:
           - Deep Learning
           - Computer Vision
           - Python
-        summary: "Neural style transfer using VGG feature maps to separate content and style. Gram matrices capture texture statistics; gradient descent on the generated image minimizes combined content/style loss."
+        summary: "Takes the style of one image (like a Van Gogh painting) and applies it to another image (like your photo) while keeping the original content recognizable. Uses a neural network to understand what 'style' and 'content' mean separately."
 
       - slug: quantum-entanglement
         name: "Fully Entangled Fraction"
@@ -184,7 +184,7 @@ categories:
           - Quantum
           - Research
           - Mathematica
-        summary: "Symbolic computation of Fully Entangled Fraction (FEF) for characterizing entanglement in multi-qubit network topologies. Mathematica implementation analyzing quantum correlations and teleportation fidelity bounds across various graph-state configurations and mixed-state ensembles."
+        summary: "Measures how 'entangled' quantum states are across different network configurations. Uses symbolic math to analyze quantum correlations and figure out how well these states could work for quantum teleportation."
 
   # Web & Blockchain
   - key: web-blockchain
@@ -203,7 +203,7 @@ categories:
           - React
           - IPFS
           - Healthcare
-        summary: "Solidity contract requiring both doctor and patient signatures for record modifications. IPFS stores files; on-chain hashes verify integrity. React frontend with MetaMask for role-based access control."
+        summary: "A medical records system where both doctor and patient must approve any changes—enforced by blockchain. Files are stored securely off-chain, with the blockchain verifying nothing was tampered with. Web interface for easy access."
 
       - slug: virtual-labs
         name: "Virtual Labs"
@@ -214,7 +214,7 @@ categories:
           - Open Source
           - Government
           - Education
-        summary: "Open source contributions to Virtual Labs, a Government of India initiative providing remote access to laboratory experiments. Bug fixes and feature additions to interactive simulations used by students across Indian universities for hands-on learning in science and engineering disciplines."
+        summary: "Contributed to a Government of India platform that lets students do lab experiments remotely through interactive simulations. Fixed bugs and added features used by students across Indian universities."
 
   # NLP & Data Science
   - key: nlp-data-science
@@ -231,4 +231,4 @@ categories:
           - Research
           - Python
           - LDA
-        summary: "Topic modeling pipeline using LDA to score paper-context relevance. Keyword extraction and topic distributions produce interpretable similarity scores for matching research papers to related abstracts."
+        summary: "Automatically finds research papers that are relevant to a given topic or context. Uses natural language processing to understand what papers are about and score how well they match what you're looking for."

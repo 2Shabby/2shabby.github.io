@@ -27,6 +27,20 @@ permalink: /projects/
 
 ---
 
+## My Favourite Project & Learning
+
+<!-- TODO: Replace this section with your own authentic thoughts. This is your interview question answer, pre-written. -->
+
+**Favourite Project:**
+
+> [YOUR INPUT NEEDED] Which project are you most proud of and why? What made it challenging? What would you do differently? Example: "My favourite project is X because..." — be specific about what you learned and what makes it stand out to you personally.
+
+**Key Learning:**
+
+> [YOUR INPUT NEEDED] What's the most valuable thing you've learned from any of your projects? This could be technical (e.g., "I finally understood why distributed systems are hard when...") or non-technical (e.g., "I learned that finishing a project is harder than starting one"). Be honest and specific.
+
+---
+
 ## Get in touch
 
 Feel free to reach out. [Contact]({{ '/about/' | relative_url }}).
