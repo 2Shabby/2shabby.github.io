@@ -35,13 +35,13 @@ Most of the important inference that is needed by a user in their day-to-day liv
 
 For example, a small locally running agent that is built on top of Home Assistant, but with Whisper and an NLP layer on top of it, already covers a large fraction of what I would consider important day-to-day inference needs.
 
-Similarly, if I wanted to run some coding assistance, here latency would be a lot more significant, but it would allow me to run code, coding assistance on without having to rely on an internet connection.
+Similarly, if I wanted to run some coding assistance, here latency would be a lot more significant, but it would allow me to run coding assistance without having to rely on an internet connection.
 
 Given this, it feels more feasible that users would be unwilling to pay for models that are running on cloud machines if the price for them is too high, if the hardware that they already have available is able to perform the same task, albeit slowly.
 
-These, the complexity of fine-tuning transformers and fine-tuning a large number of agents, maybe a mixture of experts or other agents who are working in a sequence as part of a workflow, all of these may still require extremely large compute, but the end user who is using these trained flows, Not all of them will need the same.
+The complexity of fine-tuning transformers and orchestrating agents—maybe a mixture of experts or agents working in sequence as part of a workflow—may still require extremely large compute. But the end user who is using these trained flows will not always need the same.
 
-Examples of Meta's smaller models and their mobile models all show that tool calling, fine-tuning, distillation, and all of these other such technologies have greatly helped in bridging the gap between what initial small language models and current small language models that are leveraging large language models, either for the synthesis of data or for task-specific distillation, are all quite effective.[^10][^11]
+Examples of Meta's smaller models and their mobile models show that tool calling, fine-tuning, and distillation have greatly helped in bridging the gap. Current small language models that leverage large language models—either for data synthesis or task-specific distillation—are quite effective.[^10][^11]
 
 Hybrid AI is something that will just improve latency and performance if we consider every user having a lot of compute available on their edge devices, such as their phones or whatever device they're using to interact. The cost of transcribing it locally and then sending it to the cloud LLM and then receiving the outputs feels like a much better use.
 
