@@ -6,7 +6,7 @@ permalink: /writing/
 ---
 
 <aside class="writing-note">
-  <strong>Note:</strong> This is the only section of this site written entirely by me, without LLM assistance.
+  <strong>Note:</strong> This is the only section of this site written mostly by me, with LLM assistance for copy-editing.
 </aside>
 
 {% if site.posts.size > 0 %}
