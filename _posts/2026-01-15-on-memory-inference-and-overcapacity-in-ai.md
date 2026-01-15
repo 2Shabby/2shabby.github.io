@@ -11,7 +11,7 @@ description: "Thoughts on memory bandwidth, inference needs, and whether we have
 
 Large language models and transformers are very, very powerful.
 
-My claim is that, however, my claim is that a large portion of what LLM inferences need by companies and corporations, as well as end consumers in their day-to-day lives, is something that is constrained by memory bandwidth and memory capacities.[^1][^2]
+However, my claim is that a large portion of what LLM inferences need by companies and corporations, as well as end consumers in their day-to-day lives, is something that is constrained by memory bandwidth and memory capacities.[^1][^2]
 
 <!--more-->
 
@@ -25,9 +25,9 @@ For example, the usage of various deep research modes, starting from DeepSeek, G
 
 The performance, the raw inference performance of locally running LLMs on consumer gaming GPUs like the 3070, NVIDIA 3070 8GB left me pleasantly surprised, especially when using quantized models.[^3][^4]
 
-Secondly, there has been an improvement and increase in the use of CPUs or NPUs for inference. CPUs and NPUs start require the usage of RAM or some unified RAM for storing of models.[^5][^6]
+Secondly, there has been an improvement and increase in the use of CPUs or NPUs for inference. CPUs and NPUs require the usage of RAM or some unified RAM for storing of models.[^5][^6]
 
-These have an obvious downside of being slower in terms of inference speed. However, the fact that Apple's silicon can run a 48GB model even with slower inference locally gives credence that Edge AI or AI on the edge, as long even with slower inference, would truly be valuable.[^7]
+These have an obvious downside of being slower in terms of inference speed. However, the fact that Apple's silicon can run a 48GB model even with slower inference locally gives credence that Edge AI, even with slower inference, would truly be valuable.[^7]
 
 It feels like memory and inference are two sides of the AI coin, and we have been increasing both of these to an extremely large extent.
 
@@ -43,7 +43,7 @@ These, the complexity of fine-tuning transformers and fine-tuning a large number
 
 Examples of Meta's smaller models and their mobile models all show that tool calling, fine-tuning, distillation, and all of these other such technologies have greatly helped in bridging the gap between what initial small language models and current small language models that are leveraging large language models, either for the synthesis of data or for task-specific distillation, are all quite effective.[^10][^11]
 
-HAI is something that will just improve latency and performance if we consider every user having a lot of compute available on their edge devices, such as their phones or whatever device they're using to interact. The cost of transcribing it locally and then sending it to the cloud LLM and then receiving the outputs feels like a much better use.
+Hybrid AI is something that will just improve latency and performance if we consider every user having a lot of compute available on their edge devices, such as their phones or whatever device they're using to interact. The cost of transcribing it locally and then sending it to the cloud LLM and then receiving the outputs feels like a much better use.
 
 This is obviously being done, but there is scope for improvement in terms of what responsibilities each of these takes over and what responsibilities should not be transferred to the cloud for data sovereignty, privacy, and latency reasons.
 
