@@ -5,8 +5,8 @@
 # Personal Information
 name: "Shahbaz Shaik"
 handle: "2Shabby"
-tagline: "systems, ml, and what's in between"
-short_bio: "Working on distributed systems, language models, and quantum computing."
+tagline: "building the plumbing for LLM agents"
+short_bio: "I work on LLM infrastructure and agent systems — the layer that sits between a model and something actually useful."
 
 # Social Links
 social:

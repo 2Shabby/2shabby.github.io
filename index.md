@@ -1,18 +1,18 @@
 ---
 layout: home
 title: Welcome
-description: Systems & ML engineer building distributed systems, LLM infrastructure, and edge computing solutions.
+description: I work on LLM infrastructure and agent systems.
 ---
 
-## What I'm building
+## What I'm working on
 
-**Jeeves Core** has been one of the most interesting and learning-dense projects that I have worked on. It started off with just wanting to get local LLMs to be useful, and learn the pains of creating an E2E project on top of it.
+Most of my time goes into **Jeeves Core** — a runtime for LLM agents.
 
-It then grew into a project focused on creating a reusable agent pipeline using open source libraries. However, as I worked on it and tested the various flows, the capability of SLMs surprised me, but the difficulty in creating persistent memory, logging, database access, centralized configuration, modularity, and other good practices started becoming increasingly hard when I was attempting to use various agentic frameworks.
+It started as a simple question: once you get a local model running, what does it actually take to make it useful? The answer turned out to be everything *around* the model — persistent memory, logging, config, database access, clean module boundaries. The agent frameworks I tried kept tangling these concerns together with the agent logic itself, and rewriting that plumbing for every new idea got old fast.
 
-The aim of Jeeves Core was to try and address the gap, by providing a layer of abstraction above which various agentic flows can run, without having to rewrite and reimplement the reusables and primitives that shouldn't be tightly coupled to the agent code itself.
+So Jeeves Core is the layer underneath. Agents plug into a shared runtime that handles the boring but load-bearing parts, and each capability only has to care about its own job. The [Code Analysis Pipeline]({{ '/projects/' | relative_url }}#jeeves-code-analysis) and [Personal Assistant]({{ '/projects/' | relative_url }}#jeeves-assistant) are two capabilities built on top of it — different problems, same foundation.
 
-The [Code Analysis Pipeline]({{ '/projects/' | relative_url }}#jeeves-code-analysis) and [AI Personal Assistant]({{ '/projects/' | relative_url }}#jeeves-assistant) are attempts at reusing this abstraction across different agentic tasks. Each capability plugs into the same runtime, sharing the infrastructure while focusing only on its specific job.
+The broader thing I care about: the bottleneck for useful agents isn't model quality anymore, it's everything else. That's where I want to spend my time.
 
 ---
 
