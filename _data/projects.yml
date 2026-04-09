@@ -3,232 +3,98 @@
 # Edit this file to add, remove, or modify projects and categories
 
 categories:
-  # Agentic & LLM Infrastructure
-  - key: agentic-llm
-    label: "Agentic & LLM Infrastructure"
-    description: "Distributed agents, LLM runtimes, code analysis"
+  # LLM Infrastructure & Agents
+  - key: llm-infra-agents
+    label: "LLM Infrastructure & Agents"
+    description: "The plumbing underneath useful agents"
     items:
       - slug: jeeves-runtime
         name: "Jeeves Agentic Runtime"
-        tagline: "Interruptible agent execution with checkpoint persistence"
+        tagline: "A runtime that lets LLM agents pause, resume, and share infrastructure"
         status: active
         repo_url: "https://github.com/Jeeves-Cluster-Organization/jeeves-core"
         tags:
-          - Systems
-          - Distributed
           - LLM
-          - Agentic
+          - Agents
           - Python
           - Go
           - gRPC
           - PostgreSQL
-        summary: "A system that runs AI agents reliably. Agents can be paused and resumed without losing progress. Works with different AI providers like OpenAI and Anthropic. Built with clean separation between components so it's easy to maintain and extend."
+        summary: "The layer that sits between a model and an agent that actually does something. Handles the parts that every agent needs but nobody wants to rewrite: persistent state, checkpointing so long runs can be interrupted and picked back up, provider-agnostic model access, and clean module boundaries so capabilities don't leak into each other. Works with OpenAI, Anthropic, and local models."
 
       - slug: jeeves-code-analysis
         name: "Jeeves Code Analysis Pipeline"
-        tagline: "Read-only codebase exploration with citation validation"
+        tagline: "An agent that explores codebases without making things up"
         status: active
         repo_url: "https://github.com/Jeeves-Cluster-Organization/jeeves-capability-code-analysis"
         tags:
           - LLM
-          - Agentic
-          - NLP
-          - Systems
+          - Agents
           - Python
           - PostgreSQL
           - pgvector
-          - DevOps
-        summary: "Helps AI understand and explore codebases. Has a built-in fact-checker that catches when the AI makes things up about the code. Uses multiple search strategies—from exact text matching to meaning-based search—to find the right information."
+        summary: "A read-only agent for understanding large codebases. The interesting part is the citation layer — every claim the model makes about the code is checked against the actual source, so hallucinated function names and invented behavior get caught before they reach the user. Uses a mix of exact search, structural search, and semantic search depending on what the agent is looking for."
 
       - slug: jeeves-assistant
-        name: "AI Personal Assistant Capability"
-        tagline: "Plugin architecture for agent capabilities"
+        name: "Jeeves Personal Assistant"
+        tagline: "A capability built on the Jeeves runtime — tasks, notes, and long-term memory"
         status: active
         tags:
-          - Agentic
           - LLM
-          - API
+          - Agents
+          - Python
           - PostgreSQL
           - pgvector
-          - Python
-        summary: "A personal assistant plugin that handles tasks, journaling, and reminders. Can search through past journal entries by meaning, not just keywords. Safely handles multiple edits at once and keeps history of everything for auditing."
+        summary: "A personal assistant capability that handles tasks, journaling, and reminders. Mainly a testbed for what useful long-term memory looks like in practice — searching past entries by meaning rather than keywords, keeping an audit trail of what the agent changed and why, and handling concurrent edits safely."
 
-  # Systems Programming
-  - key: systems-programming
-    label: "Systems Programming"
-    description: "Compilers, operating systems, low-level code"
-    items:
-      - slug: compiler
-        name: "C Compiler"
-        tagline: "From source to x86 machine code"
-        status: past
-        tags:
-          - Systems
-          - Compiler
-          - C
-          - x86
-          - Low-level
-        summary: "Takes C code and turns it into actual machine instructions that a computer can run. Covers the full journey: breaking code into tokens, understanding its structure, checking for type errors, and generating the final executable."
-
-      - slug: linux-shell
-        name: "Linux Shell"
-        tagline: "Process control via POSIX system calls"
-        status: past
-        tags:
-          - Systems
-          - C
-          - Linux
-          - OS
-          - Low-level
-        summary: "A command-line shell like Bash, built from scratch in C. Supports piping commands together, redirecting input/output to files, and managing background jobs. Deep dive into how operating systems handle processes."
-
-      - slug: xv6
-        name: "Xv6 Operating System"
-        tagline: "Kernel modifications to MIT's teaching OS"
-        status: past
-        tags:
-          - Systems
-          - OS
-          - Scheduling
-          - C
-          - Low-level
-        summary: "Modified a teaching operating system to experiment with how computers decide which programs run when. Implemented different scheduling approaches: priority-based (important tasks first), round-robin (everyone gets a turn), and lottery (random but fair)."
-
-  # IoT & Embedded Systems
-  - key: iot-embedded
-    label: "IoT & Embedded Systems"
-    description: "Edge devices, voice assistants, sensor systems"
-    items:
       - slug: voice-gateway
         name: "Edge Voice Assistant"
-        tagline: "Local speech processing on ARM with NPU acceleration"
+        tagline: "A voice agent that runs entirely on a small ARM box"
         status: active
         repo_url: "https://github.com/Jeeves-Cluster-Organization/voice_radxa_gateway"
         tags:
-          - IoT
-          - Embedded
-          - ML
-          - NLP
+          - LLM
+          - Edge
           - Python
           - ARM
-          - Kubernetes
           - ONNX
-        summary: "A voice assistant that runs entirely on a small ARM device—no cloud needed. Listens for a wake word, converts speech to text, and speaks back responses. Uses hardware acceleration to run AI models locally and efficiently."
+        summary: "A voice interface for Jeeves that runs on-device — wake word, speech-to-text, and text-to-speech all happen locally, with no round-trip to the cloud. Uses the onboard NPU to keep the models fast enough to feel responsive. Part of the broader interest in pushing more of the agent stack onto local hardware."
 
-      - slug: campus-energy
-        name: "Campus Energy Monitoring"
-        tagline: "Industrial power meters to web dashboard"
-        status: active
-        repo_url: "https://github.com/2Shabby/ESW"
-        tags:
-          - IoT
-          - Embedded
-          - ESP32
-          - Django
-          - Modbus
-          - FreeRTOS
-          - Hardware
-        summary: "Monitors energy usage across a campus in real-time. Small microcontrollers read power meters and environmental sensors, sending data to a web dashboard. Helps identify energy waste and track usage patterns over time."
-
-  # Machine Learning & Quantum Computing
-  - key: ml-quantum
-    label: "Machine Learning & Quantum Computing"
-    description: "Quantum state generation, ML classifiers, physics-informed networks"
+  # Research Background
+  - key: research
+    label: "Research Background"
+    description: "Earlier work in quantum ML — kept here because the problems were genuinely hard"
     items:
       - slug: quantum-density-ml
-        name: "Quantum State Generation via ML"
-        tagline: "Generating valid density matrices with structural guarantees"
+        name: "Generating Valid Quantum States with Neural Nets"
+        tagline: "Networks that produce physically valid outputs by construction, not by luck"
         status: past
         repo_url: "https://github.com/2Shabby/broadcastability_ml_project"
         tags:
-          - ML
           - Quantum
+          - ML
           - Research
-          - Python
-          - GAN
-          - VAE
           - PyTorch
-        summary: "Uses machine learning to generate valid quantum states. The neural network is designed so that every output is mathematically correct by construction—not just approximately. Combines deep learning with quantum physics constraints."
+        summary: "Training neural networks to generate quantum states is hard because most outputs aren't physically valid. The trick here was baking the validity constraints directly into the architecture, so every sample the network produces is a legitimate quantum state — no rejection sampling, no post-hoc fixing."
 
       - slug: quantum-witness-ml
-        name: "Quantum Distillability Witness Learner"
-        tagline: "Learning entanglement witnesses from measurement data"
+        name: "Learning Entanglement Witnesses"
+        tagline: "Classifiers that certify quantum entanglement from fewer measurements"
         status: past
         repo_url: "https://github.com/Jeeves-Cluster-Organization/ML_QML_Witness_Generation"
         tags:
-          - ML
           - Quantum
-          - Research
-          - Python
-          - Transformer
-          - SVM
-          - PyTorch
-        summary: "Trains classifiers to determine if quantum states have useful entanglement. The goal is to certify quantum properties using fewer measurements than traditional methods. Tested on various well-known quantum states used in research."
-
-      - slug: image-style-transfer
-        name: "Image Style Transfer"
-        tagline: "Transferring artistic texture while preserving structure"
-        status: past
-        tags:
           - ML
-          - Deep Learning
-          - Computer Vision
-          - Python
-        summary: "Takes the style of one image (like a Van Gogh painting) and applies it to another image (like your photo) while keeping the original content recognizable. Uses a neural network to understand what 'style' and 'content' mean separately."
+          - Research
+          - PyTorch
+        summary: "Training models to tell whether a quantum state has useful entanglement, using far fewer measurements than the standard approaches need. Tested across a range of canonical states."
 
       - slug: quantum-entanglement
         name: "Fully Entangled Fraction"
-        tagline: "Entanglement quantification in multi-qubit network states"
+        tagline: "Symbolic analysis of entanglement in multi-qubit networks"
         status: past
         tags:
           - Quantum
           - Research
           - Mathematica
-        summary: "Measures how 'entangled' quantum states are across different network configurations. Uses symbolic math to analyze quantum correlations and figure out how well these states could work for quantum teleportation."
-
-  # Web & Blockchain
-  - key: web-blockchain
-    label: "Web & Blockchain"
-    description: "Distributed trust, decentralized systems, web interfaces"
-    items:
-      - slug: healthcare-blockchain
-        name: "Blockchain Electronic Health Records"
-        tagline: "Dual-signature consent for medical record updates"
-        status: past
-        repo_url: "https://github.com/2Shabby/medical-records"
-        tags:
-          - Blockchain
-          - Web3
-          - Solidity
-          - React
-          - IPFS
-          - Healthcare
-        summary: "A medical records system where both doctor and patient must approve any changes—enforced by blockchain. Files are stored securely off-chain, with the blockchain verifying nothing was tampered with. Web interface for easy access."
-
-      - slug: virtual-labs
-        name: "Virtual Labs"
-        tagline: "Open source contributions to national educational platform"
-        status: past
-        tags:
-          - Web
-          - Open Source
-          - Government
-          - Education
-        summary: "Contributed to a Government of India platform that lets students do lab experiments remotely through interactive simulations. Fixed bugs and added features used by students across Indian universities."
-
-  # NLP & Data Science
-  - key: nlp-data-science
-    label: "NLP & Data Science"
-    description: "Topic modeling, semantic matching, document analysis"
-    items:
-      - slug: document-matching
-        name: "Document Matching with NLP"
-        tagline: "Relevance scoring between papers and contexts"
-        status: past
-        tags:
-          - ML
-          - NLP
-          - Research
-          - Python
-          - LDA
-        summary: "Automatically finds research papers that are relevant to a given topic or context. Uses natural language processing to understand what papers are about and score how well they match what you're looking for."
+        summary: "Symbolic math work on how entangled different multi-qubit network configurations are, and how well they'd hold up as a resource for quantum teleportation."

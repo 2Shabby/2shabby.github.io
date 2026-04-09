@@ -1,16 +1,18 @@
 ---
 layout: page
 title: About
-description: Systems and machine learning.
+description: LLM infrastructure and agent systems.
 permalink: /about/
 narrow: true
 ---
 
 ## Hi, I'm Shahbaz
 
-I work on distributed systems, LLM infrastructure, and quantum computing.
+I build LLM infrastructure and agent systems. The part I find interesting isn't the model — it's everything around it that has to work before an agent can do anything useful. Memory, state, config, boundaries, recovery, running things on the edge.
 
-**Interests:** distributed systems • LLM infrastructure • systems programming • edge computing • quantum ML
+Before the current pivot, I spent time on quantum ML research and edge/embedded systems. The through-line is the same: I like the layer where messy physical or statistical reality has to meet clean software abstractions.
+
+**What I'm thinking about right now:** runtime design for long-running agents, how to make memory actually useful instead of cosmetic, and pushing more of the agent stack onto local hardware.
 
 ---
 
