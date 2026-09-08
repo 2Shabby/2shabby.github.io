@@ -1,45 +1,35 @@
-# Site Settings
-# Main site information
-title: "2Shabby"
-description: "building the plumbing for LLM agents"
+title: "Shahbaz Shaik"
+description: "Software engineer building small, local-first systems and games."
 author:
   name: "Shahbaz Shaik"
   email: "shaikmohdshahbaz@gmail.com"
 
-# URL Configuration
-# For user site (username.github.io): url = "https://username.github.io", baseurl = ""
-# For project site (username.github.io/repo): url = "https://username.github.io", baseurl = "/repo"
 url: "https://2shabby.github.io"
-baseurl: ""  # Leave empty for user sites, set to "/repo-name" for project sites
+baseurl: ""
+lang: en
+timezone: Asia/Kolkata
 
-# Build Settings
+links:
+  github: "https://github.com/2Shabby"
+  itch: "https://2shabby.itch.io/"
+  linkedin: "https://linkedin.com/in/mohd-shahbaz-shaik"
+  email: "mailto:shaikmohdshahbaz@gmail.com"
+
 markdown: kramdown
 kramdown:
   input: GFM
   hard_wrap: false
   syntax_highlighter: rouge
-  syntax_highlighter_opts:
-    default_lang: text
 
-# Excerpt Settings
-# Controls how post excerpts are generated for preview cards
 excerpt_separator: "<!--more-->"
-
-# Permalink Style
 permalink: pretty
 
-# Timezone
-timezone: America/New_York
-
-# Default Front Matter
 defaults:
-  # All pages
   - scope:
       path: ""
       type: "pages"
     values:
       layout: "page"
-  # All posts
   - scope:
       path: ""
       type: "posts"
@@ -47,8 +37,8 @@ defaults:
       layout: "post"
       author: "Shahbaz Shaik"
 
-# Exclude from Build
-# These files and directories will not be included in the generated site
+plugins: []
+
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -56,33 +46,7 @@ exclude:
   - vendor/
   - .bundle/
   - .jekyll-cache/
-  - gemfiles/
-  - "*.gemspec"
   - README.md
   - LICENSE
-  - CHANGELOG.md
-  - Makefile
-  - scripts/
-  - tmp/
   - .git/
   - .gitignore
-
-# Include specific files/directories
-include:
-  - _pages
-
-# Plugins (GitHub Pages Safe Only)
-# Only include plugins that are supported by GitHub Pages
-# See: https://pages.github.com/versions/
-plugins: []
-
-# Collections
-# Disabled collections since we're using data-driven approach
-collections: {}
-
-# SEO and Social
-# These will be used in meta tags
-lang: en
-social:
-  github: 2Shabby
-  linkedin: mohd-shahbaz-shaik

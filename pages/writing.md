@@ -1,13 +1,10 @@
 ---
 layout: page
-title: Write-ups
-description: Technical writing, notes, and thoughts on systems and AI.
+title: Writing
+description: Notes on software, systems, and computing.
 permalink: /writing/
+narrow: true
 ---
-
-<aside class="writing-note">
-  <strong>Note:</strong> This is the only section of this site written mostly by me, with LLM assistance for copy-editing.
-</aside>
 
 {% if site.posts.size > 0 %}
 <div class="articles-list">
@@ -17,6 +14,6 @@ permalink: /writing/
 </div>
 {% else %}
 <div class="articles-empty">
-  <p>No posts yet. Coming soon.</p>
+  <p>No posts yet.</p>
 </div>
 {% endif %}

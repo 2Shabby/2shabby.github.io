@@ -1,9 +1,6 @@
-<header class="site-header" role="banner">
+<header class="site-header">
   <div class="header-inner">
-    <a href="{{ '/' | relative_url }}" class="site-logo" rel="home">
-      {{ site.data.profile.handle | default: site.title | escape }}
-    </a>
-
+    <a href="{{ '/' | relative_url }}" class="site-name" rel="home">{{ site.title }}</a>
     {% include nav.html %}
   </div>
 </header>
