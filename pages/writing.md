@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Writing
-description: Notes on software, systems, and computing.
+description: Notes on software and technology.
 permalink: /writing/
 narrow: true
 ---

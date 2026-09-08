@@ -25,16 +25,16 @@ description: Software engineer building small, local-first systems and games.
       <h3>Jeeves Core</h3>
       <span>Rust crate</span>
     </div>
-    <p>An in-process workflow runtime for deterministic and LLM-backed actions. It provides explicit stage graphs, retries, run budgets, typed failures, event streaming, and human approval pauses.</p>
+    <p>Jeeves Core is a Rust crate for running defined LLM workflows, including code-based branching, LLM retries, human-in-the-loop steps, and tools.</p>
     <p class="work-links"><a href="https://github.com/Jeeves-Cluster-Organization/jeeves-core">View repository <span aria-hidden="true">&#8599;</span></a></p>
   </article>
 
   <article class="work-item">
     <div class="work-heading">
-      <h3>OpenTextWorld</h3>
+      <h3>SeaVoyager</h3>
       <span>C++20 game</span>
     </div>
-    <p>An Age of Exploration game built around generated worlds, uncertain geography, and consequential voyage decisions. Its desktop, browser, and headless interfaces drive the same deterministic simulation.</p>
+    <p>SeaVoyager is a game about sailing in a randomly generated world and fulfilling sailing objectives while dealing with the complexities of supply and morale management.</p>
     <p class="work-links"><a href="https://2shabby.itch.io/sea-voyager">Play SeaVoyager <span aria-hidden="true">&#8599;</span></a></p>
   </article>
 
@@ -43,7 +43,7 @@ description: Software engineer building small, local-first systems and games.
       <h3>Redlines and Headlines</h3>
       <span>Rust / Bevy game</span>
     </div>
-    <p>A narrative investigation game about running a newspaper under editorial and economic pressure. Authored consequences and a causal simulation frame locally generated conversations and publishing analysis.</p>
+    <p>Redlines and Headlines is a narrative-heavy editor simulation where you are responsible for reporting on the headlines based on the city's simulation and the information presented by the NPCs through a locally running SLM.</p>
   </article>
 </section>
 
